@@ -63,6 +63,7 @@ export default function VisualImpairmentClient() {
           image="/images/hero-vi-kettlebell-rack.jpg"
           imageAlt="Esther standing at the kettlebell rack in the private Worthing studio, smiling towards the camera with one hand resting on a bell that is racked in its usual place"
           imageObjectPosition="62% 18%"
+          imageDescription={"Esther stands at the kettlebell shelf with one hand resting on a bell in the top row. The bells sit in weight order along the shelf, the lighter ones marked with coloured bands, each one in the place it is always kept. The floor in front of the shelf is clear."}
           eyebrow="Personal Training"
           heading={
             <>

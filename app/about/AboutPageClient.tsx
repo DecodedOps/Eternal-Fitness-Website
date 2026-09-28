@@ -54,6 +54,7 @@ export default function AboutPageClient() {
         imagePan="108%"
         imageObjectPosition="56% 35%"
         imageObjectPositionWide="56% 22%"
+        imageDescription={"A portrait of Esther from the waist up, hands resting on her hips, smiling straight at the camera. She stands against the studio\u2019s plywood wall with a row of kettlebells racked in weight order on the shelf behind her, and the word \u201CEXCUSES\u201D from the wall\u2019s painted lettering above her head."}
         eyebrow={"About Esther"}
         heading={"About Esther Fair"}
         subhead={"Personal trainer. Private studio, Worthing."}
