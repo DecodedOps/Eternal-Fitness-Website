@@ -6,6 +6,10 @@
     {
       "sha": "51866c1",
       "subject": "feat(WO-EF-073): add missing 'Describe this image' descriptions (8 images)"
+    },
+    {
+      "sha": "552cc1e",
+      "subject": "chore: lane reports for ef-vi-descriptions"
     }
   ],
   "filesChanged": [
