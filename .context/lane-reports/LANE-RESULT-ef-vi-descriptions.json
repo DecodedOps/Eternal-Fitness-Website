@@ -1,0 +1,26 @@
+{
+  "lane": "ef-vi-descriptions",
+  "wo": "wo-ef-medical-conditions-perf-2026-09-25",
+  "unit": "u5",
+  "commits": [
+    {
+      "sha": "51866c1",
+      "subject": "feat(WO-EF-073): add missing 'Describe this image' descriptions (8 images)"
+    }
+  ],
+  "filesChanged": [
+    "app/medical-conditions/MedicalConditionsClient.tsx",
+    "app/about/AboutPageClient.tsx",
+    "app/contact/ContactPageClient.tsx",
+    "app/visual-impairment/VisualImpairmentClient.tsx",
+    "app/HomePageClient.tsx"
+  ],
+  "verify": {
+    "tsc": "clean",
+    "tests": "n/a",
+    "escapeGrep": "0 hits"
+  },
+  "deviations": [],
+  "blockers": [],
+  "done": true
+}
