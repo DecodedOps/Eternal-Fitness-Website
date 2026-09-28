@@ -18,6 +18,7 @@ const navItems: NavItem[] = [
     label: "Specialist Training",
     to: "/specialist-training",
     children: [
+      { label: "Medical Conditions", to: "/medical-conditions" },
       { label: "Blind & Partially Sighted", to: "/visual-impairment" },
     ],
   },
@@ -35,6 +36,7 @@ const pageTitles: Record<string, string> = {
   "/about": "About",
   "/personal-training": "Personal Training",
   "/specialist-training": "Specialist Training",
+  "/medical-conditions": "Medical Conditions",
   "/visual-impairment": "Blind & Partially Sighted",
   "/cancer-rehabilitation": "Cancer Rehabilitation",
   "/falls-prevention": "Strength, Balance & Falls",
