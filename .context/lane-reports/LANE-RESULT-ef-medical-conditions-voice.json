@@ -1,0 +1,27 @@
+{
+  "lane": "ef-medical-conditions-voice",
+  "wo": "wo-ef-medical-conditions-perf-2026-09-25",
+  "unit": "CR-EF-209",
+  "commits": [
+    {
+      "sha": "756046ac2b215f8bb1b9a281a1d7e6c256e4bbc1",
+      "subject": "copy(CR-EF-209): match /medical-conditions to site voice"
+    }
+  ],
+  "filesChanged": [
+    "app/medical-conditions/MedicalConditionsClient.tsx",
+    "app/medical-conditions/page.tsx",
+    ".context/lanes/LANE-REPORT-ef-medical-conditions-voice.md"
+  ],
+  "verify": {
+    "tsc": "clean",
+    "tests": "n/a",
+    "escapeGrep": "0 hits"
+  },
+  "deviations": [
+    "Section comments `{/* WHY IT STALLS */}` and `{/* HONEST ABOUT SCOPE */}` left in place — uppercase JSX comments, not copy; brief did not list them and said anything not listed stays as-is. Case-sensitive grep for the brief's title-case strings (`Why It Stalls`, `Honest About Scope`) returns 0 hits. Case-insensitive match finds only these two comments.",
+    "Ran `pnpm install` in the worktree before tsc — node_modules was a broken junction into a dead worktree (`ef-medical-conditions-page`) with `.ignored_*` package stubs; environment fix, not a code change."
+  ],
+  "blockers": [],
+  "done": true
+}
