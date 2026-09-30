@@ -6,7 +6,7 @@ const schema = {
   "@type": "Service",
   "@id": "https://eternal-fitness.co.uk/medical-conditions/#service",
   "name": "Personal Training for Medical Conditions Worthing",
-  "description": "One-to-one personal training in Worthing for people living with a medical condition. Screened properly, paced to you, and adapted to how you feel on the day.",
+  "description": "Private, one-to-one training in Worthing for people living with a medical condition. Screened properly, with a plan that adapts to how you feel each session.",
   "url": "https://eternal-fitness.co.uk/medical-conditions",
   "provider": {
     "@type": "LocalBusiness",
@@ -38,7 +38,7 @@ const faqSchema = {
       "name": "What if I have a bad day?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Then the session adapts. Every session starts with a check-in, and the plan changes to match how you feel on the day. Being honest about a bad day never means being told you can\u2019t train."
+        "text": "Then the session adapts. Every session starts with a check-in, and I change the plan to match how you feel that day. Telling me it\u2019s a bad day doesn\u2019t mean being told you can\u2019t train."
       }
     },
     {
@@ -54,15 +54,15 @@ const faqSchema = {
       "name": "I\u2019m not a \u201Cgym person\u201D. Is this for me?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Very often, yes. Many of the people I work with never saw themselves as gym people. Training is one-to-one in a private studio in Worthing, so there are no busy gym floors and no one watching."
+        "text": "Very often, yes. Many of the people I work with never saw themselves as gym people. Sessions are one-to-one in a private studio in Worthing: no busy gym floors, no one watching."
       }
     }
   ]
 };
 
 export const metadata: Metadata = {
-  title: "Exercising With a Medical Condition in Worthing",
-  description: "One-to-one personal training in Worthing for people living with a medical condition. Screened properly, paced to you, and adapted to how you feel on the day.",
+  title: "Personal Training With a Medical Condition in Worthing",
+  description: "Private, one-to-one training in Worthing for people living with a medical condition. Screened properly, with a plan that adapts to how you feel each session.",
   alternates: { canonical: "https://eternal-fitness.co.uk/medical-conditions" },
 };
 

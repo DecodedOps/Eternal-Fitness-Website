@@ -21,29 +21,29 @@ import { IconRibbon } from "@/components/icons";
 
 export default function MedicalConditionsClient() {
   const howIWork = [
-    { title: "Screened properly", body: "Before we start I screen properly, and I\u2019m never worried about checking in with your GP or consultant. If you need medical clearance, we get it documented \u2014 \u201Cmy doctor said it\u2019s fine\u201D isn\u2019t enough to keep you safe." },
-    { title: "The right questions", body: "Not \u201Cwhat\u2019s wrong with you?\u201D but \u201Cwhat have you been told to avoid?\u201D, \u201Cwhat does a bad day look like?\u201D and \u201Cwhat have you already tried?\u201D It\u2019s surprising how often someone is carrying a restriction that expired months ago." },
-    { title: "A pause, not a ban", body: "If a condition is acute or unstable, exercise may need to stop for a while. That\u2019s normally a pause, not a permanent ban. Once things settle, it becomes about how, and how much." },
+    { title: "Screened properly", body: "Before we start, I screen you properly, and I\u2019m always happy to check in with your GP or consultant. If you need medical clearance, we get it documented, so we\u2019re both working from something clear rather than a passing \u201Cit should be fine\u201D." },
+    { title: "Three questions I ask", body: "I ask what you\u2019ve been told to avoid, what a bad day looks like for you, and what you\u2019ve already tried. It\u2019s surprising how often someone is still carrying a restriction that expired months ago." },
+    { title: "A pause, not a ban", body: "If something is acute or unstable, exercise may need to stop for a while. That\u2019s usually a pause, not a permanent ban. Once things settle, we work out how, and how much." },
   ];
 
   const firstSession = [
-    { title: "A proper baseline", body: "Your first session is a full assessment, so we know where you\u2019re starting from. Not testing you to failure \u2014 knowing your starting point is not the same as finding out what breaks you." },
-    { title: "Leave feeling capable", body: "You should leave the first session feeling capable, not exhausted. If you leave wiped out, it only confirms what you were afraid of." },
-    { title: "Adapted on the day, quietly", body: "Your plan adapts to how you feel on the day, without a fuss and without turning every change into a conversation about your condition." },
-    { title: "No \u201Ceasier option\u201D", body: "An adjustment that lets you perform an exercise with better technique isn\u2019t falling short of anyone. It\u2019s the smarter way to get more from it." },
+    { title: "A proper baseline", body: "A gentle check of where you are today: how you move, how strong you are, and any limits. It\u2019s a starting point, never a test, and it\u2019s not about finding out what breaks you." },
+    { title: "Leave feeling capable", body: "You should leave your first session feeling capable, not exhausted. Leaving wiped out would only confirm what you were afraid of, so that\u2019s not what we aim for." },
+    { title: "Adapted on the day, quietly", body: "Your plan adapts to how you feel that day, without a fuss, and without turning every change into a conversation about your condition." },
+    { title: "No \u201Ceasier option\u201D", body: "Changing an exercise so you can do it well isn\u2019t falling short of anyone. It\u2019s the smarter way to get more from it, and in a private studio there\u2019s no one to compare yourself with." },
   ];
 
   const progress = [
-    { title: "Sleeping better", body: "Often the first change people notice, long before anything shows on the scales." },
+    { title: "Sleeping better", body: "Often the first change people notice, well before anything else shifts." },
     { title: "More energy, less pain", body: "The everyday wins that make the rest of life easier." },
     { title: "Trust in your own body", body: "Rebuilt one session at a time, at a pace you can manage." },
   ];
 
   const faqs = [
     { title: "Do I need my GP\u2019s permission first?", body: "It depends on your condition and where you are with it. I screen everyone before we start, and if medical clearance is needed we get it documented. I\u2019m always happy to check in with your GP or consultant." },
-    { title: "What if I have a bad day?", body: "Then the session adapts. Every session starts with a check-in, and the plan changes to match how you feel on the day. Being honest about a bad day never means being told you can\u2019t train." },
+    { title: "What if I have a bad day?", body: "Then the session adapts. Every session starts with a check-in, and I change the plan to match how you feel that day. Telling me it\u2019s a bad day doesn\u2019t mean being told you can\u2019t train." },
     { title: "What if you\u2019re not the right trainer for me?", body: "Then I\u2019ll tell you, and help you find who is. Sometimes that means splitting your programme with another specialist so you get the right expertise for each part." },
-    { title: "I\u2019m not a \u201Cgym person\u201D. Is this for me?", body: "Very often, yes. Many of the people I work with never saw themselves as gym people. Training is one-to-one in a private studio in Worthing, so there are no busy gym floors and no one watching." },
+    { title: "I\u2019m not a \u201Cgym person\u201D. Is this for me?", body: "Very often, yes. Many of the people I work with never saw themselves as gym people. Sessions are one-to-one in a private studio in Worthing: no busy gym floors, no one watching." },
   ];
 
   const bookCta = { label: "Book a Free Consultation", href: BOOKINGS_URL, arrow: true };
@@ -60,11 +60,11 @@ export default function MedicalConditionsClient() {
         imageObjectPositionWide="60% 40%"
         imageDescription={"A one-to-one session on the studio floor. The client hinges forward at the hips holding a single small dumbbell in one hand. Esther stands beside him in the same hinge, hands sliding down her own thighs to show the path the movement takes rather than describing it. Neither is lifting from the floor; a loaded barbell rests on the mat at the edge of the frame."}
         eyebrow={"Training With a Medical Condition"}
-        heading={<>{"The Barrier Isn\u2019t"}<br />{"the Diagnosis"}</>}
-        subhead={"One-to-one personal training in Worthing for people living with a medical condition \u2014 carrying a diagnosis, a lot of apprehension, or both. Screened properly, paced to you, and adapted to how you feel on the day."}
+        heading={<>{"Training That Adapts"}<br />{"to Your Health"}</>}
+        subhead={"Private, one-to-one personal training in Worthing for people living with a medical condition. Screened properly, paced to you, and adapted to how your body actually feels today. No busy gym floors. No one watching."}
         primaryCta={bookCta}
         secondaryCta={{ label: "How I Work", href: "#how-i-work", variant: "ghost-white" }}
-        badge={<StatBadge variant="rose" value="L4" label={"Exercise Referral & Cancer Rehab"} />}
+        badge={<StatBadge variant="rose" value="L4" label={"Cancer & Exercise Rehabilitation"} />}
       />
 
       {/* WHY IT STALLS */}
@@ -72,25 +72,25 @@ export default function MedicalConditionsClient() {
         <div className="ds-split">
           <div>
             <SectionHeading
-              eyebrow={"Why It Stalls"}
+              eyebrow={"Where You Might Be"}
               eyebrowColor="teal"
               heading={"Nobody said no. But nobody said yes either."}
             />
             <Reveal y={24}>
               <p className="ds-body" style={{ marginTop: 20, marginBottom: 16 }}>
-                {"Living with a medical condition doesn\u2019t mean you have to stop being active. But the fear of causing harm \u2014 for you and for the people who love you \u2014 often lingers. The old \u201Crest is best\u201D mentality is a comfortable thing to believe when you\u2019re frightened."}
+                {"Living with a medical condition doesn\u2019t mean you have to stop being active. But the fear of doing harm \u2014 yours, and your family\u2019s \u2014 tends to linger, and \u201Crest is best\u201D is an easy thing to believe when you\u2019re frightened."}
               </p>
               <p className="ds-body" style={{ marginBottom: 16 }}>
-                {"Medical professionals are understandably wary of advising the wrong thing, so exercise often never enters the conversation. When it isn\u2019t actively recommended, it\u2019s reasonable to assume it isn\u2019t for you."}
+                {"Doctors are understandably careful about advising the wrong thing, so exercise often never comes up. When nobody recommends it, it\u2019s natural to assume it isn\u2019t for you."}
               </p>
               <p className="ds-body" style={{ marginBottom: 28 }}>
-                {"And when your body feels like it has let you down, asking more of it is frightening. That isn\u2019t a motivation problem, and it isn\u2019t solved with a training plan alone. It takes time, and someone willing to go at a pace you can actually manage."}
+                {"And when your body feels like it has let you down, asking more of it is frightening. That isn\u2019t a lack of motivation, and a training plan alone won\u2019t fix it. It takes time, and someone who will go at a pace you can actually manage."}
               </p>
               <Callout
                 icon={IconRibbon}
                 accent="rose"
                 title={"Qualified beyond standard personal training"}
-                body={"GP Exercise Referral qualified, and Level 4 qualified in Cancer and Exercise Rehabilitation (CanRehab). Specialist training to work safely with complex, stable conditions."}
+                body={"I\u2019m qualified in GP Exercise Referral and hold the Level 4 Cancer and Exercise Rehabilitation qualification (CanRehab). In practice, it means I can work safely with complex, stable conditions, and adapt as your health changes."}
               />
               <div style={{ marginTop: 28 }}>
                 <CtaButton cta={bookCta} />
@@ -118,7 +118,7 @@ export default function MedicalConditionsClient() {
       {/* HOW I WORK */}
       <Section background="cream">
         <div id="how-i-work">
-          <SectionHeading eyebrow={"How I Work"} heading={"Safe First. Then Confident."} />
+          <SectionHeading eyebrow={"How I Work"} heading={"Safe First, Then Confident"} />
         </div>
         <Reveal y={40} start="top 80%" style={{ marginTop: 40 }}>
           <FeatureBand
@@ -163,8 +163,8 @@ export default function MedicalConditionsClient() {
           <Callout
             icon={IconRibbon}
             accent="teal"
-            title={"\u201CIf something isn\u2019t a big deal to me, it becomes less of a big deal to you.\u201D"}
-            body={"Most people in your position have spent months being met with concern. Being met with something closer to normal is a relief \u2014 and it puts the say in what you\u2019re capable of back with you. \u2014 Esther"}
+            title={"If something isn\u2019t a big deal to me, it becomes less of a big deal to you."}
+            body={"Most people I work with have spent months being met with concern. Being met with something closer to normal is a relief, and it hands the say in what you\u2019re capable of back to you."}
           />
         </div>
       </Section>
@@ -173,7 +173,7 @@ export default function MedicalConditionsClient() {
       <Section background="white">
         <SectionHeading eyebrow={"What Progress Looks Like"} heading={"Maintenance Is the Achievement"} />
         <p className="ds-body" style={{ maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }}>
-          {"When you\u2019re managing a condition there is no \u201Cafter\u201D photo. For a progressive or fluctuating condition, holding steady is a real achievement \u2014 sometimes the win is that the line didn\u2019t go down."}
+          {"With a health condition there\u2019s no \u201Cafter\u201D photo, and I don\u2019t work that way anyway. If yours is progressive or fluctuating, holding steady is a real achievement. Sometimes the win is that the line didn\u2019t go down."}
         </p>
         <Reveal y={40} start="top 80%">
           <FeatureBand
@@ -185,13 +185,13 @@ export default function MedicalConditionsClient() {
 
       {/* HONEST ABOUT SCOPE */}
       <Section background="cream">
-        <SectionHeading eyebrow={"Honest About Scope"} eyebrowColor="teal" heading={"If I\u2019m Not the Right Person, I\u2019ll Tell You Who Is"} />
+        <SectionHeading eyebrow={"Being Honest With You"} eyebrowColor="teal" heading={"If I\u2019m Not the Right Person, I\u2019ll Tell You Who Is"} />
         <Reveal y={24}>
           <p className="ds-body" style={{ maxWidth: 640, margin: "0 auto 16px", textAlign: "center" }}>
-            {"My qualifications let me work with complex, stable conditions. They don\u2019t give me permission to train anyone through acute instability. If what you need sits outside my scope, I\u2019ll say so \u2014 as a redirection, not a rejection: \u201CI\u2019m not the right person for this, and here\u2019s who is.\u201D"}
+            {"My qualifications let me work with complex, stable conditions. They don\u2019t cover training someone through acute instability. If what you need is outside what I can safely do, I\u2019ll say so. It\u2019s a redirection, not a rejection: \u201CI\u2019m not the right person for this, and here\u2019s who is.\u201D"}
           </p>
           <p className="ds-body" style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
-            {"Not every referral has to be a handover, either. Sometimes a programme is best split by expertise \u2014 someone else takes the part that needs their qualification, and I keep mine. You don\u2019t lose a trainer. You gain a team."}
+            {"It doesn\u2019t always mean handing you over, either. Sometimes a programme works best split between specialists: someone else takes the part that needs their qualification, and I keep mine. You don\u2019t lose a trainer. You gain a team."}
           </p>
         </Reveal>
       </Section>
@@ -200,7 +200,7 @@ export default function MedicalConditionsClient() {
       <Section background="white">
         <FaqSplit
           eyebrow={"Common Questions"}
-          heading={"Common Questions About Training With a Medical Condition"}
+          heading={"Questions You Might Have"}
           intro={"If your question is not covered here, just ask \u2014 I would always rather you did."}
           accent="rose"
           cta={bookCta}
@@ -212,8 +212,8 @@ export default function MedicalConditionsClient() {
         image="/images/studio-kettlebell-playful.jpg"
         imageAlt="A relaxed moment with kettlebells in the Eternal Fitness studio"
         imageDescription={"Two people stand together in the studio\u2019s back room. One holds a kettlebell by its handle close to her chin with both hands, wearing training gloves, and laughs; the other stands beside her with her hands free, smiling as she watches. A tower of dumbbells in weight order and a stack of wooden step boxes sit against the wall behind them, and the floor between is clear."}
-        heading={"Ready to find out if this is right for you?"}
-        body={"The first conversation is free, with no commitment. Tell me what you\u2019ve been told, what you\u2019ve tried, and what a bad day looks like \u2014 and we\u2019ll take it from there."}
+        heading={"Your first conversation is free, with no commitment."}
+        body={"Tell me what you\u2019ve been told, what you\u2019ve tried, and what a bad day looks like, and we\u2019ll take it from there. I work with a small number of clients at a time, so every person gets my full attention."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
         secondaryCta={{ label: "Call: 07517 658 128", href: "tel:07517658128", variant: "ghost-white" }}
       />
