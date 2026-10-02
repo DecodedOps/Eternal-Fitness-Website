@@ -86,8 +86,8 @@ const EB_COL_LABELS: Record<EbColId, string> = {
 /** Fallback widths used when switching to table-layout:fixed for columns the
     user has not resized. Matches the non-clip screen defaults for Date/Day. */
 const EB_COL_FALLBACK: Record<EbColId, number> = {
-  date: 112,
-  day: 76,
+  date: 124,
+  day: 100,
   run: 160,
   bike: 160,
   swim: 160,
