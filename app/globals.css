@@ -1183,9 +1183,10 @@ table.eb-table { width: 100%; border-collapse: collapse; font-size: 14px; min-wi
    week-summary rows colspan their first two cells, so td-level widths would
    disagree row to row.
    CR-EF-210: Date/Day raised so "2026-10-03" (13px/600) and "Sun–Mon"
-   (12px/700) fit inside the 14px cell padding each side without clipping. */
-.eb-table th:nth-child(1) { width: 112px; }  /* Date */
-.eb-table th:nth-child(2) { width: 76px; }   /* Day */
+   (12px/700) fit without clipping — .eb-cell adds its own padding on top
+   of the 14px header cell padding each side. */
+.eb-table th:nth-child(1) { width: 124px; }  /* Date */
+.eb-table th:nth-child(2) { width: 100px; }  /* Day */
 .eb-table th:nth-child(3),
 .eb-table th:nth-child(4),
 .eb-table th:nth-child(5) { width: 16%; }    /* Run / Bike / Swim */
@@ -1211,8 +1212,8 @@ table.eb-table { width: 100%; border-collapse: collapse; font-size: 14px; min-wi
 .eb-col-resize {
   position: absolute;
   top: 0;
-  right: -3px;
-  width: 6px;
+  right: 0;
+  width: 10px;
   height: 100%;
   cursor: col-resize;
   touch-action: none;
