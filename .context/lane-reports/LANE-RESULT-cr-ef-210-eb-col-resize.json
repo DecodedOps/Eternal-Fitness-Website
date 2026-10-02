@@ -1,0 +1,26 @@
+{
+  "lane": "cr-ef-210-eb-col-resize",
+  "wo": "",
+  "unit": "",
+  "commits": [
+    {
+      "sha": "eb5f57315623d6791ed7e2837ca58cdbb78d5915",
+      "subject": "CR-EF-210: endurance calendar — non-clip Date/Day defaults + editor drag-resize columns"
+    }
+  ],
+  "filesChanged": [
+    "app/globals.css",
+    "app/hub/(protected)/clients/[id]/documents/[docId]/EnduranceBlockEditor.tsx",
+    ".context/lane-reports/CR-EF-210.md",
+    ".context/lane-reports/LANE-NOTES-cr-ef-210-eb-col-resize.md",
+    ".context/lane-reports/LANE-RESULT-cr-ef-210-eb-col-resize.json"
+  ],
+  "verify": {
+    "tsc": "clean",
+    "tests": "n/a",
+    "escapeGrep": "0 hits"
+  },
+  "deviations": [],
+  "blockers": [],
+  "done": true
+}
