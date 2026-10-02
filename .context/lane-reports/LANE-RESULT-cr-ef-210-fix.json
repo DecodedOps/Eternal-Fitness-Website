@@ -1,0 +1,23 @@
+{
+  "lane": "cr-ef-210-fix",
+  "wo": "",
+  "unit": "",
+  "commits": [
+    {
+      "sha": "97e7621",
+      "subject": "CR-EF-210: widen Date/Day defaults, make resize handle fully grabbable"
+    }
+  ],
+  "filesChanged": [
+    "app/globals.css",
+    "app/hub/(protected)/clients/[id]/documents/[docId]/EnduranceBlockEditor.tsx"
+  ],
+  "verify": {
+    "tsc": "clean",
+    "tests": "n/a",
+    "escapeGrep": "0 hits"
+  },
+  "deviations": [],
+  "blockers": [],
+  "done": true
+}
