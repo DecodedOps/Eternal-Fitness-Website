@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerEvent } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -67,6 +68,128 @@ function newSummaryRow(): EnduranceCalendarRow {
   return { id: uid(), type: "week_summary", weekLabel: "", run: "", bike: "", swim: "", notes: "" };
 }
 
+/* CR-EF-210 — calendar column resize. Widths are a per-browser viewer
+   convenience (localStorage only); they are never written into the document
+   body/DB. Defaults must never clip "2026-10-03" / "Sun–Mon". */
+const EB_COL_WIDTHS_KEY = "eb-col-widths-v1";
+const EB_MIN_COL_WIDTH = 56;
+const EB_COL_IDS = ["date", "day", "run", "bike", "swim", "notes"] as const;
+type EbColId = (typeof EB_COL_IDS)[number];
+const EB_COL_LABELS: Record<EbColId, string> = {
+  date: "Date",
+  day: "Day",
+  run: "Run",
+  bike: "Bike",
+  swim: "Swim",
+  notes: "Notes",
+};
+/** Fallback widths used when switching to table-layout:fixed for columns the
+    user has not resized. Matches the non-clip screen defaults for Date/Day. */
+const EB_COL_FALLBACK: Record<EbColId, number> = {
+  date: 112,
+  day: 76,
+  run: 160,
+  bike: 160,
+  swim: 160,
+  notes: 220,
+};
+const EB_ACTIONS_COL_WIDTH = 80;
+const EB_KEY_STEP = 16;
+
+function emptyColWidths(): (number | null)[] {
+  return [null, null, null, null, null, null];
+}
+
+function loadColWidths(): (number | null)[] {
+  try {
+    const raw = localStorage.getItem(EB_COL_WIDTHS_KEY);
+    if (!raw) return emptyColWidths();
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return emptyColWidths();
+    return EB_COL_IDS.map((_, i) => {
+      const v = parsed[i];
+      if (typeof v === "number" && Number.isFinite(v) && v >= EB_MIN_COL_WIDTH) return v;
+      return null;
+    });
+  } catch {
+    return emptyColWidths();
+  }
+}
+
+function saveColWidths(widths: (number | null)[]) {
+  try {
+    localStorage.setItem(EB_COL_WIDTHS_KEY, JSON.stringify(widths));
+  } catch {
+    /* localStorage unavailable — widths just won't persist */
+  }
+}
+
+/**
+ * Editor-only drag/keyboard resize handle for one calendar column.
+ * Pointer events (with setPointerCapture) so mouse and touch both work.
+ */
+function ColResizeHandle({
+  label,
+  currentWidth,
+  fallbackWidth,
+  onResize,
+  onReset,
+}: {
+  label: string;
+  currentWidth: number | null;
+  fallbackWidth: number;
+  onResize: (width: number) => void;
+  onReset: () => void;
+}) {
+  const dragRef = useRef<{ x: number; w: number } | null>(null);
+
+  const effectiveWidth = () => currentWidth ?? fallbackWidth;
+
+  const handlePointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    dragRef.current = { x: e.clientX, w: effectiveWidth() };
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+  const handlePointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    const start = dragRef.current;
+    if (!start) return;
+    onResize(Math.max(EB_MIN_COL_WIDTH, start.w + (e.clientX - start.x)));
+  };
+  const handlePointerEnd = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (!dragRef.current) return;
+    dragRef.current = null;
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch {
+      /* pointer already released */
+    }
+  };
+  const handleKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      onResize(Math.max(EB_MIN_COL_WIDTH, effectiveWidth() - EB_KEY_STEP));
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      onResize(effectiveWidth() + EB_KEY_STEP);
+    }
+  };
+
+  return (
+    <div
+      className="eb-col-resize"
+      role="separator"
+      aria-orientation="vertical"
+      aria-label={`Resize ${label} column`}
+      tabIndex={0}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerEnd}
+      onPointerCancel={handlePointerEnd}
+      onDoubleClick={onReset}
+      onKeyDown={handleKeyDown}
+    />
+  );
+}
+
 /**
  * Dedicated editor for the "endurance_block" document kind. A manually-editable,
  * calendar-based training block for endurance/multi-discipline clients — no AI
@@ -101,6 +224,62 @@ export function EnduranceBlockEditor({
   const addRow = (type: "day" | "week_summary") =>
     update({ rows: [...data.rows, type === "day" ? newDayRow() : newSummaryRow()] });
   const removeRow = (id: string) => update({ rows: data.rows.filter((r) => r.id !== id) });
+
+  // CR-EF-210 — per-column widths (editor only, localStorage, not in DB)
+  const tableRef = useRef<HTMLTableElement>(null);
+  const [colWidths, setColWidths] = useState<(number | null)[]>(emptyColWidths);
+  useEffect(() => {
+    setColWidths(loadColWidths());
+  }, []);
+  const hasCustomWidths = colWidths.some((w) => w != null);
+
+  /** Snapshot currently rendered widths for all six columns so the first
+      resize switches to table-layout:fixed without a visual jump. */
+  const snapshotRenderedWidths = (): (number | null)[] => {
+    const ths = tableRef.current?.querySelectorAll("thead th");
+    return EB_COL_IDS.map((id, i) => {
+      const th = ths?.[i] as HTMLElement | undefined;
+      if (th) return Math.max(EB_MIN_COL_WIDTH, Math.round(th.getBoundingClientRect().width));
+      return EB_COL_FALLBACK[id];
+    });
+  };
+
+  const applyColWidth = (index: number, width: number) => {
+    setColWidths((prev) => {
+      const next = prev.some((w) => w != null) ? prev.slice() : snapshotRenderedWidths();
+      next[index] = Math.max(EB_MIN_COL_WIDTH, Math.round(width));
+      saveColWidths(next);
+      return next;
+    });
+  };
+
+  const resetColWidth = (index: number) => {
+    setColWidths((prev) => {
+      const next = prev.slice();
+      next[index] = null;
+      const result = next.every((w) => w == null) ? emptyColWidths() : next;
+      saveColWidths(result);
+      return result;
+    });
+  };
+
+  const resetAllColWidths = () => {
+    const cleared = emptyColWidths();
+    setColWidths(cleared);
+    saveColWidths(cleared);
+  };
+
+  const colWidthFor = (id: EbColId, index: number): number | null => {
+    const custom = colWidths[index];
+    if (custom != null) return custom;
+    if (!hasCustomWidths) return null;
+    return EB_COL_FALLBACK[id];
+  };
+
+  const tableWidthPx = hasCustomWidths
+    ? EB_COL_IDS.reduce((sum, id, i) => sum + (colWidthFor(id, i) ?? EB_COL_FALLBACK[id]), 0) +
+      (locked ? 0 : EB_ACTIONS_COL_WIDTH)
+    : null;
 
   const targets = data.disciplineTargets ?? [];
 
@@ -198,13 +377,50 @@ export function EnduranceBlockEditor({
       <section>
         <div className="flex items-baseline justify-between gap-3 mb-3">
           <h4 className="text-xs font-bold uppercase tracking-widest text-[var(--rose-text)]">Calendar</h4>
-          {!locked && <span className="text-xs text-muted-foreground">Every cell is editable — type straight into it</span>}
+          {!locked && (
+            <span className="text-xs text-muted-foreground flex items-center gap-2 flex-wrap justify-end">
+              <span>Every cell is editable — type straight into it</span>
+              {hasCustomWidths && (
+                <button type="button" className="underline underline-offset-2 hover:opacity-80" onClick={resetAllColWidths}>
+                  Reset column widths
+                </button>
+              )}
+            </span>
+          )}
         </div>
         <div className="eb-table-wrap rounded-lg border border-[var(--color-border-warm)] bg-white">
-          <table className="eb-table">
+          <table
+            ref={tableRef}
+            className="eb-table"
+            style={
+              hasCustomWidths && tableWidthPx != null
+                ? { tableLayout: "fixed", width: `${tableWidthPx}px`, minWidth: "100%" }
+                : undefined
+            }
+          >
+            <colgroup>
+              {EB_COL_IDS.map((id, i) => {
+                const w = colWidthFor(id, i);
+                return <col key={id} style={w != null ? { width: `${w}px` } : undefined} />;
+              })}
+              {!locked && <col style={hasCustomWidths ? { width: `${EB_ACTIONS_COL_WIDTH}px` } : undefined} />}
+            </colgroup>
             <thead>
               <tr>
-                <th>Date</th><th>Day</th><th>Run</th><th>Bike</th><th>Swim</th><th>Notes</th>
+                {EB_COL_IDS.map((id, i) => (
+                  <th key={id}>
+                    {EB_COL_LABELS[id]}
+                    {!locked && (
+                      <ColResizeHandle
+                        label={EB_COL_LABELS[id]}
+                        currentWidth={colWidths[i]}
+                        fallbackWidth={EB_COL_FALLBACK[id]}
+                        onResize={(w) => applyColWidth(i, w)}
+                        onReset={() => resetColWidth(i)}
+                      />
+                    )}
+                  </th>
+                ))}
                 {!locked && <th className="w-px" aria-label="Actions" />}
               </tr>
             </thead>

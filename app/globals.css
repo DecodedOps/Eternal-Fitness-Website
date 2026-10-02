@@ -1181,9 +1181,11 @@ table.eb-table { width: 100%; border-collapse: collapse; font-size: 14px; min-wi
    content, so a busy Run cell wraps to five lines while an empty Swim cell
    sits half the table wide. Widths are set on the header cells only — the
    week-summary rows colspan their first two cells, so td-level widths would
-   disagree row to row. */
-.eb-table th:nth-child(1) { width: 76px; }   /* Date */
-.eb-table th:nth-child(2) { width: 56px; }   /* Day */
+   disagree row to row.
+   CR-EF-210: Date/Day raised so "2026-10-03" (13px/600) and "Sun–Mon"
+   (12px/700) fit inside the 14px cell padding each side without clipping. */
+.eb-table th:nth-child(1) { width: 112px; }  /* Date */
+.eb-table th:nth-child(2) { width: 76px; }   /* Day */
 .eb-table th:nth-child(3),
 .eb-table th:nth-child(4),
 .eb-table th:nth-child(5) { width: 16%; }    /* Run / Bike / Swim */
@@ -1201,6 +1203,30 @@ table.eb-table { width: 100%; border-collapse: collapse; font-size: 14px; min-wi
   text-align: left;
   padding: 10px 14px;
   border-bottom: 1px solid var(--color-warm);
+}
+
+/* CR-EF-210 — editor-only column drag-resize handles. Positioned inside the
+   sticky th (sticky is a positioned element, so it is the containing block).
+   Hidden in print via the editor-only chrome rule below. */
+.eb-col-resize {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 6px;
+  height: 100%;
+  cursor: col-resize;
+  touch-action: none;
+  background: transparent;
+  z-index: 6;
+  border-radius: 2px;
+}
+.eb-col-resize:hover,
+.eb-col-resize:focus-visible {
+  background: color-mix(in oklch, var(--color-teal) 50%, #fff);
+}
+.eb-col-resize:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 0;
 }
 .eb-table td { padding: 8px 14px; border-bottom: 1px solid var(--color-warm); vertical-align: top; }
 .eb-table tr:last-child td { border-bottom: none; }
@@ -1268,8 +1294,8 @@ table.eb-table { width: 100%; border-collapse: collapse; font-size: 14px; min-wi
 .eb-cell::placeholder { color: var(--color-muted-text); }
 .eb-table tr.eb-brick .eb-cell:hover,
 .eb-table tr.eb-race .eb-cell:hover { background: color-mix(in oklch, var(--color-amber) 11%, #fff); }
-.eb-date-cell { white-space: nowrap; color: var(--color-body); font-weight: 600; font-size: 13px; width: 1%; }
-.eb-day-cell { white-space: nowrap; color: var(--color-muted-text); font-weight: 700; font-size: 12px; width: 1%; }
+.eb-date-cell { white-space: nowrap; color: var(--color-body); font-weight: 600; font-size: 13px; }
+.eb-day-cell { white-space: nowrap; color: var(--color-muted-text); font-weight: 700; font-size: 12px; }
 .eb-notes-cell { position: relative; min-width: 200px; }
 .eb-row-del {
   display: inline-flex;
@@ -1355,7 +1381,7 @@ table.eb-table { width: 100%; border-collapse: collapse; font-size: 14px; min-wi
   .eb-table tr { break-inside: avoid; page-break-inside: avoid; }
 
   /* Editor-only chrome must never reach paper. */
-  .eb-add, .eb-row-del, .eb-hl, .eb-bullet-rm, .eb-callout-x { display: none !important; }
+  .eb-add, .eb-row-del, .eb-hl, .eb-bullet-rm, .eb-callout-x, .eb-col-resize { display: none !important; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
