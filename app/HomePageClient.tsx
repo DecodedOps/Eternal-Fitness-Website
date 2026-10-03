@@ -232,6 +232,10 @@ export default function HomePageClient() {
                 <div className="spec-photo">
                   <Image src="/images/specialist-training-esther-client.jpg" alt="Esther guiding a client through specialist training in the private Worthing studio" fill sizes="(max-width: 1000px) 100vw, 200px" style={{ objectFit: "cover" }} />
                 </div>
+                <details className="ef-desc">
+                  <summary>Describe this image</summary>
+                  <p>Esther stands in front of the power rack, smiling as a client steps up onto a low black aerobic step towards her. Her hands stay at her sides &mdash; she is watching the movement rather than holding him. Weight plates hang on pegs on the rack and along the wall, a loaded barbell rests on the floor to one side, and the floor between them is clear.</p>
+                </details>
               </div>
             </div>
           </div>

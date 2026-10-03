@@ -415,6 +415,7 @@ export default function ContactPageClient() {
         image="/images/esther-headshot-smile.jpg"
         imageAlt="Esther standing against the plywood wall of the private Worthing studio with one hand on her hip, smiling straight at the camera, the kettlebells racked in weight order on the shelf beside her."
         imagePosition="center 30%"
+        imageDescription={"A portrait of Esther from the waist up, hands resting on her hips, smiling straight at the camera. She stands against the studio\u2019s plywood wall with a row of kettlebells racked in weight order on the shelf behind her, and the word \u201CEXCUSES\u201D from the wall\u2019s painted lettering above her head."}
         eyebrow={"Not Sure Where to Start?"}
         heading={"That is completely normal."}
         body={"Book online or give me a call and we can have an informal chat — no pressure, no commitment."}
