@@ -56,8 +56,8 @@ export default function MedicalConditionsClient() {
       <PageHero
         image="/images/consultation-standing-chat-mats.jpg"
         imageAlt="Esther standing on the blue mats in the private Worthing studio with a pen and a sheet of notes, smiling as she talks with a client at the start of a session."
-        imageObjectPosition="56% 50%"
-        imageObjectPositionWide="50% 45%"
+        imageObjectPosition="81% 40%"
+        imageObjectPositionWide="50% 40%"
         imageDescription={"A first conversation in the studio. Esther stands on the blue mats holding a pen and a sheet of notes, smiling towards a client who has her back to the camera. Nobody is lifting anything yet \u2014 talking comes first. Foam rollers and blocks hang in fixed places on the wall behind her, resistance bands are racked by the door, and the mats are clear."}
         eyebrow={"Training With a Medical Condition"}
         heading={<>{"Training That Adapts"}<br />{"to Your Health"}</>}
