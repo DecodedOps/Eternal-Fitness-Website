@@ -1,0 +1,26 @@
+{
+  "lane": "ef-medical-conditions-images",
+  "wo": "wo-ef-medical-conditions-perf-2026-09-25",
+  "unit": "u6",
+  "commits": [
+    {
+      "sha": "3f8645f",
+      "subject": "feat(CR-EF-209): fresh images + captions on /medical-conditions"
+    }
+  ],
+  "filesChanged": [
+    "app/medical-conditions/MedicalConditionsClient.tsx",
+    "public/images/consultation-standing-chat-mats.jpg",
+    "public/images/active-ageing-rapport-laughing.jpg",
+    "public/images/active-ageing-hand-position-cue.jpg",
+    "public/images/rapport-trainer-and-client-laughing.jpg"
+  ],
+  "verify": {
+    "tsc": "clean",
+    "tests": "n/a",
+    "escapeGrep": "0 hits"
+  },
+  "deviations": [],
+  "blockers": [],
+  "done": true
+}
