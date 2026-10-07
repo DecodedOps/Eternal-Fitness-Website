@@ -54,11 +54,11 @@ export default function MedicalConditionsClient() {
 
       <main id="main-content">
       <PageHero
-        image="/images/approach-step3-deadlift-clients.jpg"
-        imageAlt="Esther and a client hinged forward side by side in the private Worthing studio, the client holding one small dumbbell and Esther running her hands down her own thighs to show the path the hinge takes."
-        imageObjectPosition="55% 45%"
-        imageObjectPositionWide="60% 40%"
-        imageDescription={"A one-to-one session on the studio floor. The client hinges forward at the hips holding a single small dumbbell in one hand. Esther stands beside him in the same hinge, hands sliding down her own thighs to show the path the movement takes rather than describing it. Neither is lifting from the floor; a loaded barbell rests on the mat at the edge of the frame."}
+        image="/images/consultation-standing-chat-mats.jpg"
+        imageAlt="Esther standing on the blue mats in the private Worthing studio with a pen and a sheet of notes, smiling as she talks with a client at the start of a session."
+        imageObjectPosition="56% 50%"
+        imageObjectPositionWide="50% 45%"
+        imageDescription={"A first conversation in the studio. Esther stands on the blue mats holding a pen and a sheet of notes, smiling towards a client who has her back to the camera. Nobody is lifting anything yet \u2014 talking comes first. Foam rollers and blocks hang in fixed places on the wall behind her, resistance bands are racked by the door, and the mats are clear."}
         eyebrow={"Training With a Medical Condition"}
         heading={<>{"Training That Adapts"}<br />{"to Your Health"}</>}
         subhead={"Private, one-to-one personal training in Worthing for people living with a medical condition. Screened properly, paced to you, and adapted to how your body actually feels today. No busy gym floors. No one watching."}
@@ -100,16 +100,16 @@ export default function MedicalConditionsClient() {
           <figure className="ef-figure">
             <Reveal y={40} className="ds-split-img">
               <Image
-                src="/images/about-studio-band-stretch.jpg"
-                alt="Esther and a client facing each other across the studio floor with one long resistance band held between them, Esther down in the same half-squat she is asking the client to hold."
+                src="/images/active-ageing-rapport-laughing.jpg"
+                alt="Esther laughing with an older client between exercises in the private Worthing studio, one hand at his arm, in front of the kettlebell shelves."
                 fill
                 sizes="(max-width: 1000px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", objectPosition: "41% 50%" }}
               />
             </Reveal>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>Two people facing each other across the studio floor with a single long resistance band stretched between them, one end each. Esther holds her end in at her chest and sits down into a half-squat &mdash; the same position the client is working in &mdash; so the shape is being shown rather than described. The kettlebell shelves, the whiteboard and the suspension straps are along the wall behind.</p>
+              <p>Esther and an older client stand close together between exercises, both laughing. She has a hand at his arm, checking a position rather than holding him up, and he stands relaxed and upright. Behind them the kettlebells sit on their shelves in weight order, the suspension straps hang from the ceiling, and the whiteboard is on the far wall. The floor around them is clear.</p>
             </details>
           </figure>
         </div>
@@ -147,11 +147,11 @@ export default function MedicalConditionsClient() {
           </div>
           <figure className="ef-figure">
             <Reveal y={40} className="ds-split-img">
-              <Image src="/images/approach-step2-lunges-together.png" alt="Esther and a client side by side on the studio mats, both down in a half-kneeling lunge with a hand resting on the front thigh, Esther holding the same position alongside rather than watching from standing." fill sizes="(max-width: 1000px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              <Image src="/images/active-ageing-hand-position-cue.jpg" alt="Esther guiding an older client’s hand and wrist into position in the private Worthing studio, looking down at his grip as she sets it up." fill sizes="(max-width: 1000px) 100vw, 50vw" style={{ objectFit: "cover", objectPosition: "61% 50%" }} />
             </Reveal>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>Two people on the blue mats, side by side, both in a half-kneeling lunge with the back knee down on the padding and a hand resting on the front thigh. Esther is in the same position as the client rather than standing over her, so the shape can be copied from alongside. Both are laughing. The foam rollers are racked on the wall behind them and the mats are clear.</p>
+              <p>Esther stands beside an older client and gently guides his hand and wrist into position, her eyes on his grip rather than on him. He holds his arm out and lets her adjust it. A 10kg kettlebell and a lighter one sit on the low rack behind them, and a padded bench and a step are stored along the far wall, so the space they are working in is clear.</p>
             </details>
           </figure>
         </div>
@@ -209,9 +209,10 @@ export default function MedicalConditionsClient() {
       </Section>
 
       <CTABand
-        image="/images/studio-kettlebell-playful.jpg"
-        imageAlt="A relaxed moment with kettlebells in the Eternal Fitness studio"
-        imageDescription={"Two people stand together in the studio\u2019s back room. One holds a kettlebell by its handle close to her chin with both hands, wearing training gloves, and laughs; the other stands beside her with her hands free, smiling as she watches. A tower of dumbbells in weight order and a stack of wooden step boxes sit against the wall behind them, and the floor between is clear."}
+        image="/images/rapport-trainer-and-client-laughing.jpg"
+        imageAlt="Esther and a client standing side by side in the private Worthing studio, laughing together beside the rack of exercise balls."
+        imagePosition="43% 40%"
+        imageDescription={"Esther and a client stand side by side, mid-laugh, turned towards each other. Nobody is training in this moment \u2014 it is the conversation between exercises. Behind them the exercise balls sit on their rack in size order with the medicine balls stacked below, and the window, wall clock and desk are on the back wall. The floor between them is clear."}
         heading={"Your first conversation is free, with no commitment."}
         body={"Tell me what you\u2019ve been told, what you\u2019ve tried, and what a bad day looks like, and we\u2019ll take it from there. I work with a small number of clients at a time, so every person gets my full attention."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
