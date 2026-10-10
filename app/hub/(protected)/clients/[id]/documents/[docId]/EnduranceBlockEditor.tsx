@@ -5,9 +5,11 @@ import type { KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerE
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import { IconTrash2, IconMessageCircle } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import type { EnduranceBlockData, EnduranceCalendarRow, EnduranceDisciplineTarget } from "@/lib/documents/types";
+import { parseEndurancePlan } from "@/lib/documents/parseEndurancePlan";
 
 let uidCounter = 0;
 function uid(): string {
@@ -199,14 +201,106 @@ function ColResizeHandle({
  * money"). All edits flow up through `onChange` and are saved by the parent's
  * existing PATCH flow under `body.enduranceBlock`.
  */
+/**
+ * CR-EF-211 — paste a whole plan written in the standard text layout (Title /
+ * Target event / dates / Direction / Weekly targets / Coaching note / Calendar
+ * table) and fill the editor from it. Nothing is saved until the normal Save,
+ * so Esther reviews and tweaks the result first. Anything the parser couldn't
+ * place is listed so it can be fixed by hand.
+ */
+function PastePlanPanel({
+  data,
+  onChange,
+  onTitleChange,
+}: {
+  data: EnduranceBlockData;
+  onChange: (next: EnduranceBlockData) => void;
+  onTitleChange?: (title: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [text, setText] = useState("");
+  const [result, setResult] = useState<{ days: number; weeks: number; warnings: string[] } | null>(null);
+
+  const hasContent = data.rows.length > 0 || Boolean(data.directionIntro?.trim()) || data.disciplineTargets.length > 0;
+
+  const apply = () => {
+    const parsed = parseEndurancePlan(text);
+    const days = parsed.block.rows.filter((r) => r.type === "day").length;
+    if (days === 0 && !parsed.block.directionIntro) {
+      setResult({ days: 0, weeks: 0, warnings: parsed.warnings.length ? parsed.warnings : ["Nothing recognisable in the pasted text."] });
+      return;
+    }
+    if (hasContent && !confirm("This replaces everything currently in this plan with the pasted one. Continue?")) return;
+    onChange(parsed.block);
+    if (parsed.title) onTitleChange?.(parsed.title);
+    setResult({ days, weeks: parsed.block.rows.length - days, warnings: parsed.warnings });
+    setText("");
+  };
+
+  if (!open) {
+    return (
+      <div className="flex items-center justify-between gap-3 rounded-lg border border-dashed border-[var(--hub-border)] px-4 py-3">
+        <p className="text-sm text-muted-foreground">Have the plan written out already? Paste it in and it fills this document for you.</p>
+        <Button type="button" variant="outline" size="sm" className="rounded-lg shrink-0" onClick={() => { setOpen(true); setResult(null); }}>
+          Paste plan
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3 rounded-lg border border-[var(--hub-border)] bg-[var(--hub-canvas)] p-4">
+      <div className="flex items-baseline justify-between gap-3">
+        <h4 className="text-xs font-bold uppercase tracking-widest text-[var(--rose-text)]">Paste plan</h4>
+        <button type="button" className="text-xs text-muted-foreground underline underline-offset-2 hover:opacity-80" onClick={() => setOpen(false)}>
+          Close
+        </button>
+      </div>
+      <p className="text-xs text-muted-foreground">
+        Paste the full plan: Title, Target event, Start date, End date, then the Direction, Weekly targets, Coaching note
+        and Calendar sections. Copy the calendar straight from the table so each column stays separate. Nothing is saved
+        until you press Save.
+      </p>
+      <Textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder={"Title: Rick — Foundation (12–25 Oct)\nTarget event: …\nStart date: 12/10/2026\nEnd date: 25/10/2026\nDirection\n…"}
+        className="min-h-[200px] resize-y font-mono text-xs bg-background"
+      />
+      <div className="flex items-center gap-3">
+        <Button type="button" size="sm" className="rounded-lg" onClick={apply} disabled={!text.trim()}>
+          Fill plan from text
+        </Button>
+      </div>
+      {result && (
+        <div className="space-y-1 text-sm">
+          {result.days > 0 && (
+            <p className="text-teal">
+              Filled in {result.days} {result.days === 1 ? "day" : "days"} and {result.weeks} week {result.weeks === 1 ? "total" : "totals"}. Check it below, then press Save.
+            </p>
+          )}
+          {result.warnings.length > 0 && (
+            <ul className="list-disc pl-5 text-amber-800">
+              {result.warnings.map((w, i) => <li key={i}>{w}</li>)}
+            </ul>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function EnduranceBlockEditor({
   data,
   locked,
   onChange,
+  onTitleChange,
 }: {
   data: EnduranceBlockData;
   locked: boolean;
   onChange: (next: EnduranceBlockData) => void;
+  /** Called with the pasted plan's "Title:" line, so the document title follows it. */
+  onTitleChange?: (title: string) => void;
 }) {
   const update = (patch: Partial<EnduranceBlockData>) => onChange({ ...data, ...patch });
 
@@ -285,6 +379,8 @@ export function EnduranceBlockEditor({
 
   return (
     <div className="space-y-8">
+      {!locked && <PastePlanPanel data={data} onChange={onChange} onTitleChange={onTitleChange} />}
+
       {/* Header meta fields — target event + date range */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="space-y-1.5">

@@ -217,6 +217,7 @@ export function DocumentDetailClient({
               data={enduranceBlock}
               locked={locked}
               onChange={(eb) => setBody((prev) => ({ ...prev, enduranceBlock: eb }))}
+              onTitleChange={setTitle}
             />
           ) : (
             <>
