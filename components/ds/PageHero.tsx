@@ -171,7 +171,7 @@ export function PageHero({
             />
           </div>
           {imageDescription && (
-            <details className="ef-desc">
+            <details className="ef-desc ef-desc--overlay ef-desc--overlay-left">
               <summary>Describe this image</summary>
               <p>{imageDescription}</p>
             </details>

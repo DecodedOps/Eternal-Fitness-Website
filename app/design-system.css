@@ -661,18 +661,27 @@ a.ds-card { display: block; }
     not running a screen reader. Alt serves AT; this serves the much
     larger group who can read the page but need a textual walkthrough
     of what the photograph shows. Ported from vi.css .vi-desc. ── */
-details.ef-desc { margin-top: 12px; border: 1px solid var(--color-border-warm); border-radius: 12px; background: #fff; }
+/* In-flow (contained images): a quiet text link under the photo; opens to a captioned paragraph.
+   Colours inherit, so it reads correctly on both cream and ink sections. (WO-EF-074) */
+details.ef-desc { margin-top: 10px; color: inherit; }
 details.ef-desc summary {
-  cursor: pointer; list-style: none; padding: 12px 16px; min-height: 44px;
-  display: flex; align-items: center; gap: 10px; border-radius: 12px;
-  font-size: 13.5px; font-weight: 600; color: var(--color-ink);
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px;
+  min-height: 36px; padding: 4px 2px; border-radius: 6px;
+  font-size: 13px; font-weight: 600; letter-spacing: .01em; color: inherit; opacity: .8;
 }
 details.ef-desc summary::-webkit-details-marker { display: none; }
-details.ef-desc summary::before { content: ''; width: 16px; height: 16px; flex: none; border-radius: 3px;
-  border: 2px solid var(--rose-text); border-right-width: 5px; }
-details.ef-desc summary:hover { background: var(--color-warm); }
-details.ef-desc[open] summary { border-bottom: 1px solid var(--color-border-warm); border-radius: 12px 12px 0 0; }
-details.ef-desc p { padding: 14px 16px 16px; font-size: 14px; line-height: 1.6; color: var(--color-body); }
+details.ef-desc summary::before { content: ''; width: 13px; height: 13px; flex: none; border-radius: 3px;
+  border: 2px solid var(--rose-text); border-right-width: 4px; }
+details.ef-desc summary::after { content: ''; width: 6px; height: 6px; margin-left: 2px; flex: none;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+details.ef-desc[open] summary::after { transform: translateY(1px) rotate(-135deg); }
+details.ef-desc summary:hover { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+details.ef-desc summary:focus-visible { outline: 2px solid var(--rose-text); outline-offset: 2px; opacity: 1; }
+details.ef-desc p {
+  margin: 6px 0 0; padding: 2px 0 2px 14px; border-left: 2px solid var(--rose-text);
+  max-width: 62ch; font-size: 14px; line-height: 1.6; color: inherit; opacity: .85;
+}
 
 /* Hidden by default; the footer's "Show image descriptions" switch (html.ef-show-desc) turns them on
    site-wide. The visual-impairment page always shows them — they are part of that page's pitch. (WO-EF-074) */
@@ -680,32 +689,43 @@ details.ef-desc { display: none; }
 html.ef-show-desc details.ef-desc,
 .vi-page details.ef-desc { display: block; }
 
-/* Full-bleed images: the description sits over the image as a corner pill, not as a strip below it (BUG-EF-211) */
+/* Edge-to-edge images (heroes, CTA bands, split-layout photos): a compact label pinned in the photo's
+   corner that opens upwards over the photo — never a strip hanging below it (BUG-EF-211, WO-EF-074) */
 details.ef-desc.ef-desc--overlay {
-  position: absolute; right: 16px; bottom: 16px; z-index: 5; margin: 0;
-  max-width: min(380px, calc(100% - 32px));
-  background: rgba(20, 16, 18, .78); border: 1px solid rgba(255,255,255,.18);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  position: absolute; right: 20px; bottom: 20px; z-index: 5; margin: 0;
+  max-width: min(400px, calc(100% - 40px));
+  background: rgba(20, 16, 18, .74); border: 1px solid rgba(255,255,255,.16); border-radius: 10px;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   color: #fff;
 }
-details.ef-desc.ef-desc--overlay summary { color: #fff; font-size: 12.5px; padding: 8px 14px; min-height: 44px; }
+details.ef-desc.ef-desc--overlay summary { display: flex; padding: 4px 12px; opacity: 1; font-size: 12.5px; }
 details.ef-desc.ef-desc--overlay summary::before { border-color: #fff; }
-details.ef-desc.ef-desc--overlay summary:hover { background: rgba(255,255,255,.08); }
-details.ef-desc.ef-desc--overlay[open] summary { border-bottom-color: rgba(255,255,255,.18); }
-details.ef-desc.ef-desc--overlay p { color: rgba(255,255,255,.92); max-height: 40vh; overflow: auto; }
-details.ef-desc.ef-desc--overlay-left { right: auto; left: 16px; }
+details.ef-desc.ef-desc--overlay summary:hover { text-decoration: none; background: rgba(255,255,255,.08); }
+details.ef-desc.ef-desc--overlay p {
+  margin: 0; padding: 4px 14px 14px; border-left: 0; opacity: 1;
+  font-size: 13.5px; color: rgba(255,255,255,.92); max-height: 40vh; overflow: auto;
+}
+details.ef-desc.ef-desc--overlay-left { right: auto; left: 20px; }
 @media (max-width: 760px) {
   /* Mobile: hero/CTA buttons stack at the bottom, so the pill moves to the top-right corner (below the fixed nav on heroes) */
   details.ef-desc.ef-desc--overlay,
   details.ef-desc.ef-desc--overlay-left { top: 12px; bottom: auto; right: 12px; left: auto; max-width: calc(100% - 24px); }
   #hero details.ef-desc.ef-desc--overlay,
   .ds-hero details.ef-desc.ef-desc--overlay { top: 84px; }
+  /* Split-layout photos stack under their text panel on phones, so the description sits in flow
+     beneath the photo on the section's ink background instead of covering a short photo (WO-EF-074) */
+  .ef-figure > details.ef-desc.ef-desc--overlay {
+    position: static; max-width: none; margin: 0; padding: 6px 24px 18px;
+    background: none; border: 0; border-radius: 0; backdrop-filter: none; -webkit-backdrop-filter: none;
+  }
+  .ef-figure > details.ef-desc.ef-desc--overlay summary { padding: 4px 2px; opacity: .85; }
+  .ef-figure > details.ef-desc.ef-desc--overlay p { max-height: none; padding: 2px 0 2px 14px; border-left: 2px solid var(--rose-text); }
 }
 
 /* ── Figure wrapper for image + disclosure pairs
     Wraps a contained image container and its ef-desc so the disclosure
     inherits the image's grid slot and width. ── */
-.ef-figure { margin: 0; min-width: 0; display: flex; flex-direction: column; }
+.ef-figure { position: relative; margin: 0; min-width: 0; display: flex; flex-direction: column; }
 .ef-figure > :first-child { flex: 1 1 auto; min-height: 0; }
 
 /* ── Responsive ───────────────────── */

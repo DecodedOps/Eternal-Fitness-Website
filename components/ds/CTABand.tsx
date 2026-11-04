@@ -87,7 +87,7 @@ export function CTABand({ layout = "overlay", image, imageAlt, imagePosition, he
             />
           </div>
           {imageDescription && (
-            <details className="ef-desc">
+            <details className="ef-desc ef-desc--overlay ef-desc--overlay-left">
               <summary>Describe this image</summary>
               <p>{imageDescription}</p>
             </details>
