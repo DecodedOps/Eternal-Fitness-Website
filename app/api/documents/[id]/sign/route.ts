@@ -134,6 +134,53 @@ export async function POST(request: Request, { params }: { params: { id: string 
     }
   }
 
+  // CR-EF-148: when a client signs a PAR-Q, pull emergency contact name/phone
+  // into profile.emergency_contact — fill name+phone, never touch relationship
+  // (manual-only field), never overwrite non-empty existing values with empty ones.
+  if (role === "client" && update.status === "signed" && doc.kind === "parq") {
+    try {
+      const answers =
+        feedback_responses && typeof feedback_responses === "object"
+          ? (feedback_responses as Record<string, unknown>).answers
+          : (doc.feedback_responses as Record<string, unknown> | null)?.answers;
+      const ecName =
+        answers && typeof answers === "object"
+          ? (answers as Record<string, unknown>).emergency_contact_name
+          : null;
+      const ecPhone =
+        answers && typeof answers === "object"
+          ? (answers as Record<string, unknown>).emergency_contact_phone
+          : null;
+
+      if ((typeof ecName === "string" && ecName.trim()) || (typeof ecPhone === "string" && ecPhone.trim())) {
+        const { data: clientRow } = await admin
+          .from("clients")
+          .select("profile")
+          .eq("id", doc.client_id)
+          .maybeSingle();
+
+        if (clientRow) {
+          const profile = (clientRow.profile as Record<string, unknown>) || {};
+          const ec = (profile.emergency_contact as Record<string, unknown>) || {};
+
+          const nameVal = typeof ecName === "string" ? ecName.trim() : "";
+          const phoneVal = typeof ecPhone === "string" ? ecPhone.trim() : "";
+
+          const updatedEc: Record<string, unknown> = { ...ec };
+          // Only overwrite if existing value is empty/null AND PAR-Q has a value
+          if (!updatedEc.name && nameVal) updatedEc.name = nameVal;
+          if (!updatedEc.phone && phoneVal) updatedEc.phone = phoneVal;
+          // Never touch relationship
+
+          profile.emergency_contact = updatedEc;
+          await admin.from("clients").update({ profile }).eq("id", doc.client_id);
+        }
+      }
+    } catch (ecErr) {
+      console.error("[documents/sign:emergency-contact]", ecErr);
+    }
+  }
+
   // CR-EF-128: when a client signs a PAR-Q, parse the free-text medications
   // field and merge structured entries into the client profile. A failure here
   // must never fail the sign request — the document is already saved.

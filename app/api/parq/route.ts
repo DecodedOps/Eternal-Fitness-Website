@@ -278,6 +278,42 @@ export async function POST(request: Request) {
     } catch (medsErr) {
       console.error("[parq:medications]", medsErr);
     }
+
+    // CR-EF-148: pull emergency contact name/phone from PAR-Q into
+    // profile.emergency_contact — fill name+phone only, never touch
+    // relationship (manual-only field), never overwrite non-empty existing.
+    try {
+      const ecName = emergency_contact_name || null;
+      const ecPhone = emergency_contact_phone || null;
+      const clientIdForEc = result.client_id || clientId || null;
+
+      if ((ecName || ecPhone) && clientIdForEc) {
+        const { data: clientRow } = await (id ? createAdminClient() : supabase)
+          .from("clients")
+          .select("profile")
+          .eq("id", clientIdForEc)
+          .maybeSingle();
+
+        if (clientRow) {
+          const profile = (clientRow.profile as Record<string, unknown>) || {};
+          const ec = (profile.emergency_contact as Record<string, unknown>) || {};
+
+          const updatedEc: Record<string, unknown> = { ...ec };
+          // Only overwrite if existing value is empty/null AND PAR-Q has a value
+          if (!updatedEc.name && ecName) updatedEc.name = ecName;
+          if (!updatedEc.phone && ecPhone) updatedEc.phone = ecPhone;
+          // Never touch relationship
+
+          profile.emergency_contact = updatedEc;
+          await (id ? createAdminClient() : supabase)
+            .from("clients")
+            .update({ profile })
+            .eq("id", clientIdForEc);
+        }
+      }
+    } catch (ecErr) {
+      console.error("[parq:emergency-contact]", ecErr);
+    }
   }
 
   // After a successful resubmission, notify the coach with a field-level diff.
