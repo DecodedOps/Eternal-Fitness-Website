@@ -96,18 +96,20 @@ export default function MedicalConditionsClient() {
             </Reveal>
           </div>
           <figure className="ef-figure">
-            <Reveal y={40} className="ds-split-img">
+            {/* Square, not the default 3:4 — landscape photo with Esther and the client either side of
+                the frame; a portrait crop cuts one of them out (WO-EF-074) */}
+            <Reveal y={40} className="ds-split-img" style={{ aspectRatio: "1 / 1" }}>
               <Image
-                src="/images/active-ageing-rapport-laughing.jpg"
-                alt="Esther laughing with an older client between exercises in the private Worthing studio, one hand at his arm, in front of the kettlebell shelves."
+                src="/images/spec-card-health.jpg"
+                alt="A client laughing as she holds a light kettlebell at her chest in the private Worthing studio, with Esther standing beside her, hands on her knees, smiling across at her."
                 fill
                 sizes="(max-width: 1000px) 100vw, 50vw"
-                style={{ objectFit: "cover", objectPosition: "41% 50%" }}
+                style={{ objectFit: "cover", objectPosition: "32% 50%" }}
               />
             </Reveal>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>Esther and an older client stand close together between exercises, both laughing. She has a hand at his arm, checking a position rather than holding him up, and he stands relaxed and upright. Behind them the kettlebells sit on their shelves in weight order, the suspension straps hang from the ceiling, and the whiteboard is on the far wall. The floor around them is clear.</p>
+              <p>A client stands holding a light kettlebell in both hands at her chest, laughing. Esther stands beside her, leaning forward with her hands on her knees and smiling across at her. Behind them are the blue mats, a wall fan and clock by the window, and a desk; a rack of dumbbells and two stacked wooden plyo boxes are on the right, and resistance bands hang by the doorway on the left.</p>
             </details>
           </figure>
         </div>
