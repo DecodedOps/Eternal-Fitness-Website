@@ -57,7 +57,7 @@ export default function TestimonialsPageClient() {
       <main id="main-content">
       <PageHero
         image="/images/consultation-programme-review.jpg"
-        imageAlt="Esther standing in the private Worthing studio holding the session&#x2019;s written programme and a pen, laughing with a client who is mid-set at the power rack with a dumbbell up at her shoulder."
+        imageAlt="Esther standing in the private Worthing studio holding the session's written programme and a pen, laughing, as a client by the power rack holds a dumbbell at chest height."
         imageObjectPosition="50% 30%"
         eyebrow="Client Stories"
         heading={<>In their <em>own words</em></>}
@@ -66,7 +66,7 @@ export default function TestimonialsPageClient() {
         belowLeadVariant="plain"
         primaryCta={bookCta}
         secondaryCta={{ label: "Read the reviews", href: "#reviews", variant: "outline" }}
-        imageDescription={"A one-to-one session in progress at the power rack. The client stands with a dumbbell up at her shoulder, part-way through a set. Esther stands a couple of paces away holding the session\u2019s programme on paper with a pen in her hand, laughing with her \u2014 the plan stays in the coach\u2019s hands and gets called out, rather than being something the client has to read between sets. The trap bar and a loaded barbell are on their wall hooks behind them."}
+        imageDescription={"A one-to-one session in progress by the power rack. The client stands with her back to the camera, holding a dumbbell up at chest height. Esther stands a couple of paces away holding the session's programme on paper with a pen in her hand, laughing. The trap bar and a loaded barbell hang on their wall hooks behind them, below the “Be stronger than your excuses” lettering."}
       />
 
       <FeaturedReviewedBand showPress={false} />
@@ -262,14 +262,14 @@ export default function TestimonialsPageClient() {
 
       <CTABand
         image="/images/consultation-warm-chat.jpg"
-        imageAlt="Esther standing talking with a client between exercises in the private Worthing studio, both of them laughing, in the open gap between the power rack on one side and the kettlebell shelves on the other."
+        imageAlt="Esther laughing as she talks with a client between exercises in the private Worthing studio, between the power rack on one side and the kettlebell shelves on the other."
         imagePosition="center 30%"
         eyebrow="Free Consultation"
         heading="The first conversation is free, with no commitment."
         body="I work with a small number of clients at a time — so every person gets my full attention."
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
         secondaryCta={{ label: "Call: 07517 658 128", href: "tel:07517658128", variant: "ghost-white" }}
-        imageDescription={"A pause in a one-to-one session. Esther and a client stand facing each other in the open middle of the studio floor, both laughing, in the gap between the power rack on one side and the kettlebell shelves on the other. Nothing is being lifted. A barbell is down on the floor at the edge of the frame, off to one side of where they are standing."}
+        imageDescription={"A pause in a one-to-one session. Esther, in a pink T-shirt, stands against the lettered wall facing a client in a blue T-shirt and laughs. He has his back to the camera. They stand between the power rack on the left and the kettlebell shelves on the right. Nothing is being lifted. A loaded barbell and a pair of adjustable dumbbells lie on the floor at their feet."}
       />
 
       </main>

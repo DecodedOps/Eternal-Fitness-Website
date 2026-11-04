@@ -163,7 +163,7 @@ export default function FAQsPageClient() {
       <PageHero
         layout="split"
         image="/images/consultation-warm-chat.jpg"
-        imageAlt="Esther standing talking with a client between exercises in the private Worthing studio, both of them laughing, in the open gap between the power rack on one side and the kettlebell shelves on the other."
+        imageAlt="Esther laughing as she talks with an older client between exercises in the private Worthing studio, standing between the power rack and the kettlebell shelves."
         imageObjectPosition="50% 38%"
         imageObjectPositionWide="50% 28%"
         eyebrow={"FAQs"}
@@ -198,7 +198,7 @@ export default function FAQsPageClient() {
             </div>
           </div>
         }
-        imageDescription={"A pause in a one-to-one session. Esther and a client stand facing each other in the open middle of the studio floor, both laughing, in the gap between the power rack on one side and the kettlebell shelves on the other. Nothing is being lifted. A barbell is down on the floor at the edge of the frame, off to one side of where they are standing."}
+        imageDescription={"A pause in a one-to-one session. Esther and an older client stand facing each other between the power rack on the left and the kettlebell shelves on the right. Esther is laughing, and the client has his back half turned to the camera. Nothing is being lifted. A loaded barbell and a pair of adjustable dumbbells lie on the floor at their feet, and “Be stronger than your excuses” is painted on the wall above."}
       />
 
       {/* FAQ Section */}
@@ -320,14 +320,14 @@ export default function FAQsPageClient() {
       <CTABand
         layout="split"
         image="/images/coaching-deadlift-setup.jpg"
-        imageAlt="A client hinged over a loaded barbell in the private Worthing studio taking his grip, with Esther leaning in from the side so her eyes are level with the bar, one hand out towards it and neither hand on him."
+        imageAlt="A client hinged over a loaded barbell in the private Worthing studio taking his grip, with Esther bending forward across the bar to watch his set-up, one hand out towards it and neither hand on him."
         imagePosition="center 55%"
         eyebrow={"Free Consultation"}
         heading={"The first conversation is free, with no commitment."}
         body={"I work with a small number of clients at a time — so every person gets my full attention."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
         secondaryCta={{ label: "Call: 07517 658 128", href: "tel:07517658128", variant: "ghost-white" }}
-        imageDescription={"A one-to-one session at the barbell. The client stands over a loaded bar and takes his grip; the plates are marked 5 KG in large white figures on black. Esther has leaned in from the side so her eyes are level with the bar rather than watching from standing, one hand out towards it and neither hand touching him. Resistance bands hang from the wall on the right and the kettlebells are on their shelf behind."}
+        imageDescription={"A one-to-one session at the barbell. The client stands over a loaded bar and takes his grip; the plates are marked 5 KG in large white figures on black. Esther stands across the bar from him and bends forward at the hips to look at his set-up, one hand out towards the bar and neither hand touching him. Resistance bands hang on the right, the power rack is on the left and the kettlebells are on their shelf at the back."}
       />
       </main>
       <Footer />

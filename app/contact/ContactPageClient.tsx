@@ -115,7 +115,7 @@ export default function ContactPageClient() {
       <PageHero
         layout="split"
         image="/images/studio-kettlebell-shelf.jpg"
-        imageAlt="The kettlebell shelves in the private Worthing studio: two steel tiers holding the bells in weight order, the lighter ones marked with coloured bands on the top shelf and the heavier ones printed with their weight below, with the aerobic steps stacked underneath and the floor in front clear."
+        imageAlt="The kettlebell shelves in the private Worthing studio: two steel tiers holding the bells in rough weight order, the lightest marked with coloured discs and the heavier ones printed with their weight, with aerobic steps stacked underneath."
         imageObjectPosition="50% 30%"
         imageObjectPositionWide="50% 38%"
         eyebrow={"Contact & Booking"}
@@ -134,7 +134,7 @@ export default function ContactPageClient() {
             </div>
           </div>
         }
-        imageDescription={"Two tiers of steel shelving against the studio\u2019s plywood wall. The kettlebells stand in a row in weight order \u2014 the lighter bells along the top shelf, each marked with a coloured band, the heavier ones on the shelf below with their weights printed in large figures on the side. Aerobic steps are stacked in the space under the bottom shelf, and the rubber floor in front of the shelves is clear."}
+        imageDescription={"Two tiers of steel shelving against the studio’s plywood wall. The kettlebells stand in a row in rough weight order. The lightest three, on the left of the top shelf, have a coloured disc on the side, and the rest have their weight printed on them. The heavier bells sit on the shelf below, with 10 KG printed in large figures on the front two. Aerobic steps in blue, black and pink are stacked under the bottom shelf. The rubber floor in front is clear apart from a few weight plates at the right-hand edge."}
       />
 
       {/* Book Online + Direct Contact */}
@@ -413,9 +413,9 @@ export default function ContactPageClient() {
       <CTABand
         layout="split"
         image="/images/esther-headshot-smile.jpg"
-        imageAlt="Esther standing against the plywood wall of the private Worthing studio with one hand on her hip, smiling straight at the camera, the kettlebells racked in weight order on the shelf beside her."
+        imageAlt="Esther standing against the plywood wall of the private Worthing studio with her hands on her hips, smiling straight at the camera, a row of kettlebells on the shelf behind her."
         imagePosition="center 30%"
-        imageDescription={"A portrait of Esther from the waist up, hands resting on her hips, smiling straight at the camera. She stands against the studio\u2019s plywood wall with a row of kettlebells racked in weight order on the shelf behind her, and the word \u201CEXCUSES\u201D from the wall\u2019s painted lettering above her head."}
+        imageDescription={"A portrait of Esther from the waist up, hands resting on her hips, smiling straight at the camera. She stands against the studio’s plywood wall, with a row of kettlebells on a low shelf behind her to the right and the word “EXCUSES” from the wall’s painted lettering above her head."}
         eyebrow={"Not Sure Where to Start?"}
         heading={"That is completely normal."}
         body={"Book online or give me a call and we can have an informal chat — no pressure, no commitment."}

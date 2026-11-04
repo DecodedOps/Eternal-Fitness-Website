@@ -83,7 +83,7 @@ export default function SpecialistTrainingClient() {
         <PageHero
           layout="split"
           image="/images/who-health.jpg"
-          imageAlt="A client seated on the bench inside the power rack in the private Worthing studio, back to the camera, drawing a single cable handle down to shoulder height with one hand while the other rests on the thigh."
+          imageAlt="A woman seated on a bench inside the power rack in the private Worthing studio, seen side-on, holding a single cable handle with her arm stretched overhead."
           imageObjectPosition="50% 38%"
           imageObjectPositionWide="50% 35%"
           eyebrow={"Specialist Training"}
@@ -91,7 +91,7 @@ export default function SpecialistTrainingClient() {
           subhead={"Most personal training assumes a body that works in a predictable way. Mine does not. I work with people whose needs are routinely designed around rather than designed for."}
           primaryCta={bookCta}
           secondaryCta={{ label: "Find Out More", href: "#specialisms", variant: "ghost-white" }}
-          imageDescription={"A one-to-one session at the cable station. The client sits on the bench inside the power rack and draws a single handle down to shoulder height with one hand, the other hand resting on the thigh, so the movement is done seated and one side at a time. Weight plates are stored on the rack\u2019s own pegs on both sides; a barbell and one loose plate are down on the floor at the front of the frame."}
+          imageDescription={"A cable exercise at the power rack. A woman in black sits on a bench inside the rack, seen from the side, with one arm stretched fully overhead holding a single cable handle, so the movement is done seated and one side at a time. Weight plates are stored on the rack's pegs, a bar and one loose plate lie on the floor at the front of the frame, and a large exercise ball sits on a rack above to the left."}
         />
 
         {/* THE APPROACH */}
@@ -111,7 +111,7 @@ export default function SpecialistTrainingClient() {
               </Reveal>
               <details className="ef-desc">
                 <summary>Describe this image</summary>
-                <p>Esther and a client work side by side on two blue mats, both in the same position: one foot forward in a deep crouch, leaning over the front knee with their hands down on the mat. Esther is doing the movement with her rather than standing over her. Resistance bands and a foam roller hang on the wall to the left, wooden plyo boxes are stacked to the right beside a rack of medicine balls, and the floor around the mats is clear.</p>
+                <p>Esther and a client work side by side on two blue mats, both in the same position: one foot forward in a deep crouch, leaning over the front knee with their hands low by the mat. Esther is doing the movement with her rather than standing over her. Resistance bands and a foam roller hang on the wall to the left, two wooden plyo boxes are stacked to the right beside a vertical rack of round weights, and a window, a TV and a desk are on the back wall. The floor around the mats is clear.</p>
               </details>
             </figure>
             <div>
@@ -181,12 +181,12 @@ export default function SpecialistTrainingClient() {
         <CTABand
           layout="split"
           image="/images/studio-1.jpg"
-          imageAlt="Esther standing at the kettlebell shelves in the private Worthing studio with a hand resting on the bells, smiling towards the camera, the mirror, whiteboard and adjustable bench along the wall behind her."
+          imageAlt="Esther standing at the kettlebell shelves in the private Worthing studio with her hands resting on the bells, smiling towards the camera, the mirror and whiteboard behind her and the adjustable bench in the foreground."
           heading={"Ready to find out if this is right for you?"}
           body={"The first conversation is free, with no commitment. I work with a small number of clients at a time \u2014 so every person gets my full attention."}
           primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
           secondaryCta={{ label: "Call: 07517 658 128", href: "tel:07517658128", variant: "ghost-white" }}
-          imageDescription={"Esther stands at the kettlebell shelves with a hand resting on the bells along the top row, turned back towards the camera. The bells sit in weight order, the lighter ones marked with coloured bands. Along the wall behind her are the mirror, the whiteboard, the suspension straps and the adjustable bench, each in its own fixed place; the floor between them is clear."}
+          imageDescription={"Esther stands at the kettlebell shelves with both hands resting on bells along the top row, turned back towards the camera and smiling. Some of the bells carry coloured dots. Step platforms are stacked under the shelves, adjustable dumbbells sit on the floor to the left, and plates rest on the floor by her feet. The mirror, the whiteboard and the suspension straps are on the wall behind her, and the adjustable bench stands upright in the foreground on the right."}
         />
       </main>
       <Footer />

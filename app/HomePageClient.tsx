@@ -27,7 +27,7 @@ export default function HomePageClient() {
         <div className="hero-media">
           <Image
             src="/images/hero-pullup-rack.png"
-            alt="Esther standing inside the power rack in the private Worthing studio, one hand up on the pull-up bar and the other on the upright beside her, smiling at the camera, with the matting around her clear of kit."
+            alt="Esther standing inside the power rack in the private Worthing studio, one hand up on the pull-up bar and the other on the upright beside her, smiling and looking off to one side."
             fill
             priority
             sizes="100vw"
@@ -62,7 +62,7 @@ export default function HomePageClient() {
         </div>
         <details className="ef-desc ef-desc--overlay ef-desc--overlay-left">
           <summary>Describe this image</summary>
-          <p>Esther stands inside the power rack with one hand up on the pull-up bar and the other resting on the upright at shoulder height &mdash; the rack itself doubling as something to hold. Behind her, the exercise balls sit in wall cradles and the slam balls on a tiered rack; the barbell is up on the rack&rsquo;s own hooks. The matting she is standing on is clear.</p>
+          <p>Esther stands inside the power rack with one hand up on the pull-up bar and the other resting on the upright at shoulder height, the rack itself doubling as something to hold. Behind her, the exercise balls sit in wall cradles and the slam balls on a tiered rack; a barbell stands on its end against the wall to the right, beside a bench. The floor where she is standing is clear.</p>
         </details>
       </section>
 
@@ -140,7 +140,7 @@ export default function HomePageClient() {
               </div>
               <details className="ef-desc">
                 <summary>Describe this image</summary>
-                <p>A one-to-one session on the studio mats. The client holds a forearm plank. Esther kneels alongside him and rests one flat, open hand on his upper back &mdash; a cue to activate the muscles here. Her other hand stays clear of him. Behind them the room is quiet &mdash; racked resistance bands on one wall, a foam roller, nothing on the floor.</p>
+                <p>A one-to-one session on the studio mats. The client holds a forearm plank. Esther crouches alongside him and rests one flat, open hand on his upper back as a cue for where his body should be. Her other hand rests on her own thigh. Behind them the room is quiet: resistance bands hang on one wall, a foam roller is racked on the other, and nothing is left on the floor.</p>
               </details>
               </figure>
             </div>
@@ -156,7 +156,7 @@ export default function HomePageClient() {
               </div>
               <details className="ef-desc">
                 <summary>Describe this image</summary>
-                <p>Two people on the blue mats, side by side, both in a half-kneeling lunge with the back knee down on the padding and a hand resting on the front thigh. Esther is in the same position as the client rather than standing over her, so the shape can be copied from alongside. Both are laughing. The foam rollers are racked on the wall behind them and the mats are clear.</p>
+                <p>Two people on the blue mats, side by side, both in a half-kneeling lunge with the back knee down on the padding and a hand resting on the front thigh. Esther is in the same position as the client rather than standing over her, so the shape can be copied from alongside. Esther is laughing and the client is smiling across at her. A foam roller is racked on the wall behind them and the mats are clear.</p>
               </details>
               </figure>
             </div>
@@ -165,14 +165,14 @@ export default function HomePageClient() {
               <div className="sc"><h3>{"Progress you can feel, not a number on a scale"}</h3><p>{"Climbing stairs with less effort. Sleeping better. Walking further. That is the real-world strength we build together."}</p></div>
               <figure className="ef-figure">
               <div className="ef-tech si" style={{ "--fx": "50%", "--fy": "48%" } as React.CSSProperties}>
-                <Image src="/images/approach-step3-deadlift-clients.jpg" alt="Esther and a client hinged forward side by side in the private Worthing studio, the client holding one small dumbbell and Esther running her hands down her own thighs to show the path the hinge takes." fill sizes="(max-width: 1000px) 100vw, 360px" style={{ objectFit: "cover" }} />
+                <Image src="/images/approach-step3-deadlift-clients.jpg" alt="Esther and a client hinged forward side by side in the private Worthing studio, the client holding one small dumbbell and Esther with her hands at her knees in the same position." fill sizes="(max-width: 1000px) 100vw, 360px" style={{ objectFit: "cover" }} />
                 <div className="ef-veil" />
                 <svg className="ef-arc" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" /></svg>
                 <div className="ef-pin"><span className="ef-dot" />Hip hinge</div>
               </div>
               <details className="ef-desc">
                 <summary>Describe this image</summary>
-                <p>A one-to-one session on the studio floor. The client hinges forward at the hips holding a single small dumbbell in one hand. Esther stands beside him in the same hinge, hands sliding down her own thighs to show the path the movement takes rather than describing it. Neither is lifting from the floor; a loaded barbell rests on the mat at the edge of the frame.</p>
+                <p>A one-to-one session on the studio floor. The client hinges forward at the hips holding a single small dumbbell in one hand. Esther stands beside him in the same hinge with her hands at her knees, showing how far the movement goes rather than describing it. Neither is lifting from the floor; plates on a stand sit in the foreground and a loaded barbell lies on the floor at the back of the room.</p>
               </details>
               </figure>
             </div>
@@ -280,7 +280,7 @@ export default function HomePageClient() {
 
       {/* CTA */}
       <section id="cta">
-        <div className="ctabg"><Image src="/images/studio-1.jpg" alt="Esther standing at the kettlebell shelves in the private Worthing studio with a hand resting on the bells, smiling towards the camera, the mirror, whiteboard and adjustable bench along the wall behind her." fill sizes="100vw" style={{ objectFit: "cover" }} />
+        <div className="ctabg"><Image src="/images/studio-1.jpg" alt="Esther standing at the kettlebell shelves in the private Worthing studio with a hand on one of the bells, smiling towards the camera, the mirror and whiteboard on the wall behind her and an adjustable bench in the foreground." fill sizes="100vw" style={{ objectFit: "cover" }} />
         </div>
         <div className="ctac">
           <div className="stag stag-w" style={{ marginBottom: 16 }}>{"Free Consultation"}</div>
@@ -293,7 +293,7 @@ export default function HomePageClient() {
         </div>
         <details className="ef-desc ef-desc--overlay">
           <summary>Describe this image</summary>
-          <p>Esther stands at the kettlebell shelves with a hand resting on the bells along the top row, turned back towards the camera. The bells sit in weight order, the lighter ones marked with coloured bands. Along the wall behind her are the mirror, the whiteboard, the suspension straps and the adjustable bench, each in its own fixed place; the floor between them is clear.</p>
+          <p>Esther stands at the kettlebell shelves with a hand on one of the bells on the top row, turned back towards the camera. The bells sit in rows, the lighter ones marked with coloured dots. Behind her are the mirror, the whiteboard and the suspension straps, with stepper platforms stacked under the shelves. An adjustable bench stands in the foreground, and adjustable dumbbells and weight plates sit on the floor nearby.</p>
         </details>
       </section>
 

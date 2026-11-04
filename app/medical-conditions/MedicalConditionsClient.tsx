@@ -151,7 +151,7 @@ export default function MedicalConditionsClient() {
             </Reveal>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>Esther stands beside an older client and gently guides his hand and wrist into position, her eyes on his grip rather than on him. He holds his arm out and lets her adjust it. A 10kg kettlebell and a lighter one sit on the low rack behind them, and a padded bench and a step are stored along the far wall, so the space they are working in is clear.</p>
+              <p>Esther stands beside an older client and gently guides his hand and wrist into position, her eyes on his grip rather than on him. His arm hangs slightly forward and he lets her adjust it. A 10 kg kettlebell and a lighter one sit on the low rack behind them. A mirror and a whiteboard are on the wall to the right, with padded benches and a step stored in the corner.</p>
             </details>
           </figure>
         </div>
@@ -212,7 +212,7 @@ export default function MedicalConditionsClient() {
         image="/images/rapport-trainer-and-client-laughing.jpg"
         imageAlt="Esther and a client standing side by side in the private Worthing studio, laughing together beside the rack of exercise balls."
         imagePosition="43% 40%"
-        imageDescription={"Esther and a client stand side by side, mid-laugh, turned towards each other. Nobody is training in this moment \u2014 it is the conversation between exercises. Behind them the exercise balls sit on their rack in size order with the medicine balls stacked below, and the window, wall clock and desk are on the back wall. The floor between them is clear."}
+        imageDescription={"Esther and a client stand side by side, mid-laugh, turned towards each other. Nobody is training in this moment; it is the conversation between exercises. Behind them two exercise balls sit on a wall rack with the medicine balls stacked on a stand below, and the window, wall clock, fan and desk are on the back wall."}
         heading={"Your first conversation is free, with no commitment."}
         body={"Tell me what you\u2019ve been told, what you\u2019ve tried, and what a bad day looks like, and we\u2019ll take it from there. I work with a small number of clients at a time, so every person gets my full attention."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}

@@ -89,7 +89,7 @@ export default function PricingPageClient() {
       <PageHero
         layout="split"
         image="/images/pricing-hero-coaching.jpg"
-        imageAlt="A client half-kneeling on a padded mat in the private Worthing studio holding a barbell anchored at one end into the rack, while Esther stands two paces in front with a flat hand held out at chest height as a target to work to."
+        imageAlt="A client half-kneeling in the private Worthing studio holding one end of a barbell that runs down to the floor, while Esther stands nearby with her arm held out to the side at shoulder height."
         imagePan="122%"
         imageObjectPosition="50% 40%"
         imageObjectPositionWide="50% 32%"
@@ -98,7 +98,7 @@ export default function PricingPageClient() {
         subhead={"One-to-one training, in packages of 12 or 24 sessions — in the studio or online. I start with a free consultation, so you only book what you actually need."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL, arrow: true }}
         secondaryCta={{ label: "See Pricing", href: "#pricing" }}
-        imageDescription={"A one-to-one session in the middle of the studio. The client kneels on one knee on a padded mat, holding the free end of a barbell whose other end is anchored into the rack behind her. Esther stands two paces in front holding one hand out flat at chest height as a height to work to, and is not touching the client at any point. The whiteboard, the kettlebell shelves and the mirror run along the wall behind them."}
+        imageDescription={"A one-to-one session in the studio. The client half-kneels on a small round pad and holds the end of a barbell in her right hand. The bar runs forward and down to the floor near the step platforms. Her left arm reaches out sideways to hold a bar stored on the rack's wall pegs. Esther stands a little way off to her front right, looking at her, with her right arm held out to the side at about shoulder height, palm down, and is not touching the client. Behind them are the “Be stronger than your excuses” wall lettering, the kettlebell shelves, the mirror, the whiteboard and the suspension straps."}
       />
 
       {/* What You're Investing In (3-item benefit grid) */}
@@ -236,14 +236,14 @@ export default function PricingPageClient() {
       <CTABand
         layout="split"
         image="/images/pricing-studio.jpg"
-        imageAlt="A client walking a lunge across the open floor of the private Worthing studio with his hands on his thighs and no weight, and Esther stepping the same lunge alongside him half a pace behind."
+        imageAlt="A client stepping into a lunge across the open floor of the private Worthing studio with no weight, arms by his sides, while Esther does the same lunge beside him."
         imagePosition="center 35%"
         eyebrow={"Free Consultation"}
         heading={"The first conversation is free, with no commitment."}
         body={"I work with a small number of clients at a time \u2014 so every person gets my full attention."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
         secondaryCta={{ label: "Call: 07517 658 128", href: "tel:07517658128", variant: "ghost-white" }}
-        imageDescription={"A one-to-one session on the open floor. The client steps forward into a lunge with his hands resting on his thighs and nothing in them. Esther walks the same lunge alongside him, half a pace behind, matching the step rather than calling it from across the room. A barbell lies on the floor behind them, well out of the line they are walking."}
+        imageDescription={"A one-to-one session on the open floor. The client, in a navy T-shirt, steps forward into a lunge with his arms down by his sides and nothing in his hands. Esther, in a pink T-shirt, does the same lunge just beside him, a little further back from the camera, rather than calling it from across the room. A loaded barbell lies on the floor behind them, with the power rack to the left and the kettlebell shelves along the back wall."}
       />
       </main>
       <Footer />

@@ -50,7 +50,7 @@ export default function AboutPageClient() {
       <PageHero
         layout="split"
         image="/images/about-hero-esther-portrait.png"
-        imageAlt="Esther standing against the plywood wall of the private Worthing studio with one hand on her hip, smiling straight at the camera, the kettlebells racked in weight order on the shelf beside her."
+        imageAlt="Esther standing against the plywood wall of the private Worthing studio with both hands on her hips, smiling straight at the camera, a row of kettlebells on the shelf beside her."
         imagePan="108%"
         imageObjectPosition="56% 35%"
         imageObjectPositionWide="56% 22%"
@@ -69,12 +69,12 @@ export default function AboutPageClient() {
           <figure className="ef-figure" style={{ position: "relative" }}>
             <Reveal y={40}>
               <div className="ds-split-img">
-                <Image src="/images/about-story-deadlift.jpg" alt="A client hinged over a loaded barbell in the private Worthing studio taking his grip, with Esther standing a step back so she can see the whole lift rather than leaning in." fill sizes="(max-width: 1000px) 100vw, 45vw" style={{ objectFit: "cover", objectPosition: "54% 50%" }} />
+                <Image src="/images/about-story-deadlift.jpg" alt="A client hinged over a loaded barbell in the private Worthing studio taking his grip, with Esther standing on the far side of the bar watching, not touching him." fill sizes="(max-width: 1000px) 100vw, 45vw" style={{ objectFit: "cover", objectPosition: "54% 50%" }} />
               </div>
             </Reveal>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>A one-to-one session at the barbell, a beat after the setup. The client is hinged over the bar with both hands on it; the plates are marked 5 KG in large white figures. Esther has stepped back a pace so she can see the whole lift, hands at her sides, and is not touching him. Resistance bands hang from the wall on the right; the floor around the bar is clear.</p>
+              <p>A one-to-one session at the barbell, a beat after the setup. The client is hinged over the bar with both hands on it; the plates are marked 5 KG in large white figures. Esther stands on the far side of the bar, looking down at it with one hand held out, not touching him. Resistance bands hang on the wall on the right; the floor around the bar is clear.</p>
             </details>
             <figcaption className="ds-figcaption">The private studio, Worthing</figcaption>
           </figure>
@@ -135,12 +135,12 @@ export default function AboutPageClient() {
           <figure className="ef-figure">
             <Reveal y={40}>
               <div className="ds-split-img" style={{ aspectRatio: "4/3" }}>
-                <Image src="/images/about-experience-coaching.png" alt="A client seated on the upright bench in the private Worthing studio pressing two dumbbells overhead, with Esther standing behind the bench and a hand under each of his elbows through the whole movement." fill sizes="(max-width: 1000px) 100vw, 45vw" style={{ objectFit: "cover", objectPosition: "50% 35%" }} />
+                <Image src="/images/about-experience-coaching.png" alt="A client seated on the upright bench in the private Worthing studio with two dumbbells at shoulder height, Esther standing behind the bench with her hands under his elbows." fill sizes="(max-width: 1000px) 100vw, 45vw" style={{ objectFit: "cover", objectPosition: "50% 35%" }} />
               </div>
             </Reveal>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>A one-to-one session at the bench, seen from behind. The client presses two dumbbells up from shoulder height, sitting back against the upright bench. Esther stands behind him with a hand under each elbow all the way up and all the way down, so he knows where the support is without having to look for it. The studio door and the window are ahead of them; the floor behind the bench is clear.</p>
+              <p>A one-to-one session at the bench, seen from behind and to one side. The client sits back against the upright bench with two dumbbells at shoulder height, ready to press. Esther stands behind the bench with one hand under his near elbow and her other hand ready under his far arm, so the support is there without him having to look for it. The studio door and the window are ahead of them.</p>
             </details>
           </figure>
           <div>
@@ -204,11 +204,11 @@ export default function AboutPageClient() {
         <Reveal className="ds-grid-2" stagger={0.12} y={40} start="top 82%" >
           <figure style={{ margin: 0 }}>
             <div className="ds-split-img" style={{ aspectRatio: "16/10" }}>
-              <Image src="/images/about-studio-band-stretch.jpg" alt="Esther and a client facing each other across the studio floor with one long resistance band held between them, Esther down in the same half-squat she is asking the client to hold." fill sizes="(max-width: 1000px) 100vw, 50vw" style={{ objectFit: "cover", objectPosition: "50% 40%" }} />
+              <Image src="/images/about-studio-band-stretch.jpg" alt="Esther and a client facing each other in the private Worthing studio, the client holding a resistance band anchored to the power rack while Esther shows the movement with her arms out straight and hands clasped." fill sizes="(max-width: 1000px) 100vw, 50vw" style={{ objectFit: "cover", objectPosition: "50% 40%" }} />
             </div>
             <details className="ef-desc">
               <summary>Describe this image</summary>
-              <p>Two people facing each other across the studio floor with a single long resistance band stretched between them, one end each. Esther holds her end in at her chest and sits down into a half-squat &mdash; the same position the client is working in &mdash; so the shape is being shown rather than described. The kettlebell shelves, the whiteboard and the suspension straps are along the wall behind.</p>
+              <p>Two people facing each other across the studio floor. A long resistance band is looped round the power-rack upright and runs across to the client, who holds the other end. Esther stands in a wide stance with her knees softly bent and her arms straight out in front, hands clasped, showing the shape rather than describing it. The kettlebell shelves, the mirror, the whiteboard and the suspension straps are along the wall behind.</p>
             </details>
           </figure>
           <figure style={{ margin: 0 }}>
@@ -270,14 +270,14 @@ export default function AboutPageClient() {
       <CTABand
         layout="split"
         image="/images/studio-kettlebell-shelf.jpg"
-        imageAlt="The kettlebell shelves in the private Worthing studio: two steel tiers holding the bells in weight order, the lighter ones marked with coloured bands on the top shelf and the heavier ones printed with their weight below, with the aerobic steps stacked underneath and the floor in front clear."
+        imageAlt="The kettlebell shelves in the private Worthing studio: two steel tiers holding the bells in rough weight order, the lightest marked with coloured discs and the heavier ones printed with their weight, with aerobic steps stacked underneath."
         imagePosition="center 45%"
         eyebrow={"Free Consultation"}
         heading={"The first conversation is free, with no commitment."}
         body={"I work with a small number of clients at a time \u2014 so every person gets my full attention."}
         primaryCta={{ label: "Book a Free Consultation", href: BOOKINGS_URL }}
         secondaryCta={{ label: "Call: 07517 658 128", href: "tel:07517658128", variant: "ghost-white" }}
-        imageDescription={"Two tiers of steel shelving against the studio\u2019s plywood wall. The kettlebells stand in a row in weight order \u2014 the lighter bells along the top shelf, each marked with a coloured band, the heavier ones on the shelf below with their weights printed in large figures on the side. Aerobic steps are stacked in the space under the bottom shelf, and the rubber floor in front of the shelves is clear."}
+        imageDescription={"Two tiers of steel shelving against the studio’s plywood wall. The kettlebells stand in a row in rough weight order. The lightest three, on the left of the top shelf, have a coloured disc on the side, and the rest have their weight printed on them. The heavier bells sit on the shelf below, with 10 KG printed in large figures on the front two. Aerobic steps in blue, black and pink are stacked under the bottom shelf. The rubber floor in front is clear apart from a few weight plates at the right-hand edge."}
       />
       </main>
       <Footer />

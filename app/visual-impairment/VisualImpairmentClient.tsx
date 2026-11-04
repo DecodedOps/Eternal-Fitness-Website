@@ -61,9 +61,9 @@ export default function VisualImpairmentClient() {
       <main id="main-content">
         <PageHero
           image="/images/hero-vi-kettlebell-rack.jpg"
-          imageAlt="Esther standing at the kettlebell rack in the private Worthing studio, smiling towards the camera with one hand resting on a bell that is racked in its usual place"
+          imageAlt="Esther standing at the kettlebell rack in the private Worthing studio, smiling towards the camera with her hands resting on the racked bells."
           imageObjectPosition="62% 18%"
-          imageDescription={"Esther stands at the kettlebell shelf with one hand resting on a bell in the top row. The bells sit in weight order along the shelf, the lighter ones marked with coloured bands, each one in the place it is always kept. The floor in front of the shelf is clear."}
+          imageDescription={"Esther stands at the kettlebell shelf with both hands resting on bells in the top row, smiling towards the camera. Some of the bells carry coloured dots, and more bells sit on the shelf below and in the mirror to the right."}
           eyebrow="Personal Training"
           heading={
             <>
@@ -141,7 +141,7 @@ export default function VisualImpairmentClient() {
                 <div className="vi-plate">
                   <Image
                     src="/images/studio-fixed-positions.jpg"
-                    alt="The private studio between sessions, empty: bare rubber matting on the floor with nothing left out on it, and weights, exercise balls and resistance bands stored on wall racks"
+                    alt="The private studio between sessions, empty, with weights, exercise balls and resistance bands stored on racks and a few dumbbells, a mat and plyo boxes on the rubber floor."
                     fill
                     sizes="(max-width: 1000px) 100vw, 50vw"
                     style={{ objectFit: "cover" }}
@@ -156,11 +156,7 @@ export default function VisualImpairmentClient() {
                 </div>
                 <details className="vi-desc">
                   <summary>Describe this image</summary>
-                  <p>
-                    The private studio with no one in it. The floor is bare rubber matting — no loose plates, no
-                    dumbbells left out, nothing to walk into. Weights, exercise balls and resistance bands stored in
-                    racks.
-                  </p>
+                  <p>The private studio with no one in it, seen from the doorway area. The floor is rubber matting. Most equipment is stored: dumbbells on a rack, exercise balls on a rack above them, resistance bands on a wall hook, and kettlebells on shelves along the far wall. A few things are on the floor: a pair of dumbbells in front of the dumbbell rack, a pair of kettlebells by the far wall, plates at the foot of the power rack, a blue mat on the right and wooden plyo boxes on the left.</p>
                 </details>
               </figure>
             </Reveal>
@@ -223,12 +219,7 @@ export default function VisualImpairmentClient() {
                 </figcaption>
                 <details className="vi-desc">
                   <summary>Describe this image</summary>
-                  <p>
-                    A one-to-one session on the studio mats. The client holds a forearm plank. Esther kneels alongside
-                    him and rests one flat, open hand on his upper back - a cue to activate the muscles here. Her
-                    other hand stays clear of him. Behind them the room is quiet — racked resistance bands on one
-                    wall, a foam roller, nothing on the floor.
-                  </p>
+                  <p>A one-to-one session on the studio mats. The client holds a forearm plank. Esther kneels alongside him and rests one flat, open hand on his upper back, a cue for where the line of his body should sit. Her other hand rests on her own thigh, clear of him. Behind them the room is quiet: resistance bands racked on one wall, a foam roller, and nothing on the floor but the mats.</p>
                 </details>
               </figure>
             </Reveal>
