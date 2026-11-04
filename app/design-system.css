@@ -293,7 +293,9 @@ a.ds-card { display: block; }
    radius, one hairline, no overlay anywhere. Replaces the overlay
    layout which is retired but retained as layout="overlay" fallback.
    ───────────────────────────────────────────────────────────────── */
-.ds-hero-split { background: var(--color-ink); min-height: 0; display: block; }
+/* padding-top clears the fixed 72px navbar — without it the eyebrow and the top
+   of the photo sit hidden behind the header. */
+.ds-hero-split { background: var(--color-ink); min-height: 0; display: block; padding-top: 72px; }
 .ds-hero-split-grid {
   display: grid;
   grid-template-columns: 44% 1fr;
