@@ -152,7 +152,7 @@ export default function VisualImpairmentClient() {
                     <span></span>
                     <span></span>
                   </span>
-                  <div className="vi-cap">Fixed positions, clear floor — the studio between sessions</div>
+                  <div className="vi-cap">Fixed positions — the studio between sessions</div>
                 </div>
                 <details className="vi-desc">
                   <summary>Describe this image</summary>
