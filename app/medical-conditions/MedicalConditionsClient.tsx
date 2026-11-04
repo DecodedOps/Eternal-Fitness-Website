@@ -9,7 +9,6 @@ import {
   SectionHeading,
   PageHero,
   FeatureBand,
-  StatBadge,
   CTABand,
   Callout,
   Reveal,
@@ -64,7 +63,6 @@ export default function MedicalConditionsClient() {
         subhead={"Private, one-to-one personal training in Worthing for people living with a medical condition. Screened properly, paced to you, and adapted to how your body actually feels today. No busy gym floors. No one watching."}
         primaryCta={bookCta}
         secondaryCta={{ label: "How I Work", href: "#how-i-work", variant: "ghost-white" }}
-        badge={<StatBadge variant="rose" value="L4" label={"Cancer & Exercise Rehabilitation"} />}
       />
 
       {/* WHY IT STALLS */}

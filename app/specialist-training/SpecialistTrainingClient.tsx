@@ -8,12 +8,10 @@ import {
   Section,
   SectionHeading,
   PageHero,
-  StatBadge,
   CTABand,
   Reveal,
   CtaButton,
   ProcessFlow,
-  MotionArcs,
   PulseLine,
   IndexList,
   FaqSplit,
@@ -93,7 +91,6 @@ export default function SpecialistTrainingClient() {
           subhead={"Most personal training assumes a body that works in a predictable way. Mine does not. I work with people whose needs are routinely designed around rather than designed for."}
           primaryCta={bookCta}
           secondaryCta={{ label: "Find Out More", href: "#specialisms", variant: "ghost-white" }}
-          badge={<StatBadge variant="rose" value="L4" label={"Cancer & Exercise Rehab"} />}
           imageDescription={"A one-to-one session at the cable station. The client sits on the bench inside the power rack and draws a single handle down to shoulder height with one hand, the other hand resting on the thigh, so the movement is done seated and one side at a time. Weight plates are stored on the rack\u2019s own pegs on both sides; a barbell and one loose plate are down on the floor at the front of the frame."}
         />
 
@@ -101,21 +98,20 @@ export default function SpecialistTrainingClient() {
         <Section background="white">
           <div className="ds-split">
             <figure className="ef-figure">
-              <Reveal y={40} className="ds-split-img">
+              {/* Square, not the default 3:4 — the photo is landscape with Esther and the client side by
+                  side, and a portrait crop cuts one of them out (WO-EF-074) */}
+              <Reveal y={40} className="ds-split-img" style={{ aspectRatio: "1 / 1" }}>
                 <Image
-                  src="/images/studio-kneel-stretch.jpg"
-                  alt="Esther and a client sitting on the studio mats in a wide seated stretch, both leaning onto one hand and laughing, with the studio&apos;s black curly-coated dog sitting on the mat against Esther&apos;s side."
+                  src="/images/specialise-3.jpg"
+                  alt="Esther and a client side by side on the studio mats, both down in the same low crouch with their hands on the mat, Esther doing the movement alongside her rather than watching."
                   fill
                   sizes="(max-width: 1000px) 100vw, 50vw"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", objectPosition: "50% 70%" }}
                 />
-                <div className="ds-art-chip">
-                  <MotionArcs accent="rose" />
-                </div>
               </Reveal>
               <details className="ef-desc">
                 <summary>Describe this image</summary>
-                <p>The end of a session on the mats. Esther and a client sit on the blue matting in a wide seated stretch, each leaning onto one hand, both laughing. The studio dog &mdash; large, black and curly-coated &mdash; has come and sat on the mat and is leaning against Esther. The resistance bands are racked on the wall and the floor beyond the mats is clear.</p>
+                <p>Esther and a client work side by side on two blue mats, both in the same position: one foot forward in a deep crouch, leaning over the front knee with their hands down on the mat. Esther is doing the movement with her rather than standing over her. Resistance bands and a foam roller hang on the wall to the left, wooden plyo boxes are stacked to the right beside a rack of medicine balls, and the floor around the mats is clear.</p>
               </details>
             </figure>
             <div>
