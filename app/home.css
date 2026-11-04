@@ -205,6 +205,7 @@
 .efhome .spec-list li.pending { color: rgba(255,255,255,.45); font-style: italic; font-weight: 400; }
 .efhome .spec-list li.pending::before { background: rgba(255,255,255,.45); }
 .efhome .spec-row { display: grid; grid-template-columns: 1fr 200px; gap: 24px; align-items: start; margin-top: 26px; }
+.efhome .spec-fig { align-self: stretch; }
 .efhome .spec-photo { position: relative; border-radius: 16px; overflow: hidden; align-self: stretch; min-height: 260px; }
 .efhome .spec-photo img { border-radius: 16px; object-position: center 15%; }
 @media (max-width: 1000px) {

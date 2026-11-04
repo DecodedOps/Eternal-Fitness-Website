@@ -674,6 +674,12 @@ details.ef-desc summary:hover { background: var(--color-warm); }
 details.ef-desc[open] summary { border-bottom: 1px solid var(--color-border-warm); border-radius: 12px 12px 0 0; }
 details.ef-desc p { padding: 14px 16px 16px; font-size: 14px; line-height: 1.6; color: var(--color-body); }
 
+/* Hidden by default; the footer's "Show image descriptions" switch (html.ef-show-desc) turns them on
+   site-wide. The visual-impairment page always shows them — they are part of that page's pitch. (WO-EF-074) */
+details.ef-desc { display: none; }
+html.ef-show-desc details.ef-desc,
+.vi-page details.ef-desc { display: block; }
+
 /* Full-bleed images: the description sits over the image as a corner pill, not as a strip below it (BUG-EF-211) */
 details.ef-desc.ef-desc--overlay {
   position: absolute; right: 16px; bottom: 16px; z-index: 5; margin: 0;

@@ -68,8 +68,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-      <html lang="en" className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
+      <html lang="en" className={`${dmSans.variable} ${dmSerifDisplay.variable}`} suppressHydrationWarning>
         <body>
+        {/* Applies the visitor's saved "Show image descriptions" choice before first paint (WO-EF-074) */}
+        <script dangerouslySetInnerHTML={{ __html: `try{if(localStorage.getItem("ef-show-desc")==="1")document.documentElement.classList.add("ef-show-desc")}catch(e){}` }} />
         <Analytics />
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <Providers>{children}</Providers>

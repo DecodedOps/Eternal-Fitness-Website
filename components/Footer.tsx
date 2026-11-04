@@ -3,6 +3,7 @@ import { IconFacebook, IconArrowUpRight } from "@/components/icons";
 import EternalFitnessLogo from "@/components/EternalFitnessLogo";
 import { useBookingModal } from "@/components/BookingModal";
 import { FeaturedReviewedBand } from "@/components/ds/FeaturedReviewedBand";
+import { ImageDescriptionsToggle } from "@/components/ImageDescriptionsToggle";
 
 const websiteSchema = {
   "@context": "https://schema.org",
@@ -134,7 +135,8 @@ const Footer = () => {
           {/* Bottom bar */}
           <div className="max-w-[1320px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3.5 pt-[26px] text-[12.5px] text-white/45">
             <span>&copy; {new Date().getFullYear()} Eternal Fitness &middot; Worthing, West Sussex</span>
-            <nav aria-label="Legal" className="flex gap-[22px]">
+            <nav aria-label="Legal" className="flex flex-wrap gap-x-[22px] gap-y-1">
+              <ImageDescriptionsToggle className={`transition-colors hover:text-white ${focusRing}`} />
               <Link href="/privacy-policy" className={`transition-colors hover:text-white ${focusRing}`}>Privacy</Link>
               <Link href="/terms" className={`transition-colors hover:text-white ${focusRing}`}>Terms</Link>
               <Link href="/cookies-policy" className={`transition-colors hover:text-white ${focusRing}`}>Cookies</Link>
