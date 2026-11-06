@@ -1,0 +1,1193 @@
+{
+ "applied_to": "production eternal_fitness",
+ "wo": "wo-ef-testing-round-2026-08-31",
+ "exercises_changed": 118,
+ "by_client": {
+  "Monique Weardon": 76,
+  "Tom Putnam": 31,
+  "Emma Atkinson": 9,
+  "Nathan Wadey": 2
+ },
+ "changes": [
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Spinal Decompression",
+   "group": "Superset C",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset C",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Spinal Decompression",
+   "group": "Superset C",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset C",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Outlook booking — Tom Putnam",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Calf Raise",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset C",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Calf Raise",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset C",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Dumbbell Bicep Curl",
+   "group": "Superset 4",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Dumbbell Bicep Curl",
+   "group": "Superset 4",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 2)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 2)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 2)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 2)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 2)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 2)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Arnold Press (left, seated)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Landmine Single Arm Row (right)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Arnold Press (right, seated)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Kneel-to-Stand Progression",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "GRADUATION CHECK — Kneeling hip mobility",
+   "group": "Kneeling hip mobility",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Kneel-to-Stand Progression",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "GRADUATION CHECK — Kneeling hip mobility",
+   "group": "Kneeling hip mobility",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Dumbbell Arnold Press",
+   "group": "Superset A",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Dumbbell Single Arm Press",
+   "group": "Superset B",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Spinal Decompression",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Dumbbell Arnold Press",
+   "group": "Superset A",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Dumbbell Single Arm Press",
+   "group": "Superset B",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset B",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Spinal Decompression",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 3)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 3)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 4)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body A (Week 4)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "90/90 hip switch with hold",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Arnold Press (left, seated)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Landmine Single Arm Row (right)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Arnold Press (right, seated)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Dumbbell Arnold Press",
+   "group": "Superset A",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Spinal Decompression",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Dumbbell Arnold Press",
+   "group": "Superset A",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Spinal Decompression",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Press & Carry",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Calf Raise",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Calf Raise",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Lateral Raise",
+   "group": "Superset 3",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Skull Crusher",
+   "group": "Superset 4",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Dumbbell Hammer Curl",
+   "group": "Superset 5",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "DB Lateral Raise",
+   "group": "Superset 3",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "DB Skull Crusher",
+   "group": "Superset 4",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 1)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Dumbbell Hammer Curl",
+   "group": "Superset 5",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Arnold Press (left, seated)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Landmine Single Arm Row (right)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Emma Atkinson",
+   "session": "Workout A",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "DB Arnold Press (right, seated)",
+   "group": "Superset 1 — landmine + seated (single side) — move bar to landmine",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Calf Raise",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Scapular Squeeze",
+   "group": "Superset A",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Half Kneeling Hip Flexor Stretch",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Calf Raise",
+   "group": "Superset B",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Pull & Hinge",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Chest Opener",
+   "group": "Superset C",
+   "from": 1,
+   "to": 2
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Kneel-to-Stand Progression",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "GRADUATION CHECK — Kneeling hip mobility",
+   "group": "Kneeling hip mobility",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Monique Weardon",
+   "session": "Kneel-to-Stand Progression",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "GRADUATION CHECK — Kneeling hip mobility",
+   "group": "Kneeling hip mobility",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Outlook booking — Tom Putnam",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Outlook booking — Tom Putnam",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 3)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 3)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 3)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "thoracic opener on swiss ball",
+   "group": "Superset 1",
+   "from": 1,
+   "to": 4
+  },
+  {
+   "client": "Tom Putnam",
+   "session": "Full Body B (Week 3)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Seated Piriformis Stretch",
+   "group": "Superset 2",
+   "from": 1,
+   "to": 3
+  },
+  {
+   "client": "Nathan Wadey",
+   "session": "Workout A — Full Body (Repeat 3)",
+   "ver": "studio",
+   "sec": "main_block",
+   "exercise": "Plank with Alternating Reach Through",
+   "group": "Core & Glute Activation",
+   "from": 2,
+   "to": 3
+  },
+  {
+   "client": "Nathan Wadey",
+   "session": "Workout A — Full Body (Repeat 3)",
+   "ver": "home",
+   "sec": "main_block",
+   "exercise": "Plank with Alternating Reach Through",
+   "group": "Core & Glute Activation",
+   "from": 2,
+   "to": 3
+  }
+ ]
+}

@@ -1,0 +1,624 @@
+SESSIONS TOUCHED: 8
+EXERCISES BACKFILLED: 60
+REPORT: [
+  {
+    "client": "Craig Blackman",
+    "block": 1,
+    "session": 6,
+    "section": "cooldown",
+    "exercise": "Supine Knee-to-Chest Stretch",
+    "restored_equipment": [
+      "mat"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "warm_up",
+    "exercise": "Standing Hip Circle",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "warm_up",
+    "exercise": "Band Pull-Apart",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Dumbbell Single Arm Row",
+    "restored_equipment": [
+      "dumbbell",
+      "sofa"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Dumbbell Upright Shrug",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Dumbbell Sumo Squat",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Dumbbell Romanian Deadlift",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Band Face Pull",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Dumbbell Step-Up to Knee Drive",
+    "restored_equipment": [
+      "dumbbell",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Band Seated Row",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Dumbbell Seated Hammer Curl",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 4,
+    "section": "main_block",
+    "exercise": "Heel Drop",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "warm_up",
+    "exercise": "Standing Hip Circle",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "warm_up",
+    "exercise": "Band Pull-Apart",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Dumbbell Arnold Press",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Band Chest Press",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Dumbbell Lateral Lunge",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Band Seated Row",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Dumbbell Single Arm Press",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Supported Reverse Lunge",
+    "restored_equipment": [
+      "dumbbell",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Dumbbell Lateral Raise",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "main_block",
+    "exercise": "Band Bicep Curl",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 1,
+    "section": "cooldown",
+    "exercise": "Standing Calf Stretch",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "warm_up",
+    "exercise": "Standing Hip Circle",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "warm_up",
+    "exercise": "Band Pull-Apart",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Dumbbell Arnold Press",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Band Chest Press",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Dumbbell Lateral Lunge",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Band Seated Row",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Dumbbell Single Arm Press",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Supported Reverse Lunge",
+    "restored_equipment": [
+      "dumbbell",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Dumbbell Lateral Raise",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "main_block",
+    "exercise": "Band Bicep Curl",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 2,
+    "section": "cooldown",
+    "exercise": "Standing Calf Stretch",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "warm_up",
+    "exercise": "Standing Hip Circle",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "warm_up",
+    "exercise": "Band Pull-Apart",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Dumbbell Single Arm Row",
+    "restored_equipment": [
+      "dumbbell",
+      "sofa"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Dumbbell Upright Shrug",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Dumbbell Sumo Squat",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Dumbbell Romanian Deadlift",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Band Face Pull",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Dumbbell Step-Up to Knee Drive",
+    "restored_equipment": [
+      "dumbbell",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Band Seated Row",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Dumbbell Seated Hammer Curl",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 5,
+    "section": "main_block",
+    "exercise": "Heel Drop",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Craig Blackman",
+    "block": 1,
+    "session": 4,
+    "section": "cooldown",
+    "exercise": "Quad Stretch (Kneeling)",
+    "restored_equipment": [
+      "mat",
+      "TRX"
+    ]
+  },
+  {
+    "client": "Craig Blackman",
+    "block": 1,
+    "session": 4,
+    "section": "cooldown",
+    "exercise": "Child's Pose",
+    "restored_equipment": [
+      "mat"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "warm_up",
+    "exercise": "Standing Hip Circle",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "warm_up",
+    "exercise": "Band Pull-Apart",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Dumbbell Arnold Press",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Band Chest Press",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Dumbbell Lateral Lunge",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Band Seated Row",
+    "restored_equipment": [
+      "band",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Dumbbell Single Arm Press",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Supported Reverse Lunge",
+    "restored_equipment": [
+      "dumbbell",
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Dumbbell Lateral Raise",
+    "restored_equipment": [
+      "dumbbell"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "main_block",
+    "exercise": "Band Bicep Curl",
+    "restored_equipment": [
+      "band"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 3,
+    "section": "cooldown",
+    "exercise": "Standing Calf Stretch",
+    "restored_equipment": [
+      "bannister"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 6,
+    "section": "main_block",
+    "exercise": "Add load at the side — 3-6kg DB, suitcase-style",
+    "restored_equipment": [
+      "Dumbbells"
+    ]
+  },
+  {
+    "client": "Monique Weardon",
+    "block": 1,
+    "session": 6,
+    "section": "main_block",
+    "exercise": "Arms overhead — DB or KB extended overhead throughout",
+    "restored_equipment": [
+      "Dumbbells",
+      "Kettlebell"
+    ]
+  }
+]
+BACKFILL_COMMITTED

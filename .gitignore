@@ -46,3 +46,17 @@ _*.cjs
 .context/lanes/*.log
 .context/lanes/_archive/
 opencode-run.log
+
+# Run output: kept on disk, never in history (watchdog tidy 2026-11-06)
+.context/reports/
+.context/reviews/
+.context/hygiene/
+.context/scenario-runs/
+.context/scenario-evidence/
+.context/worktree-salvage/
+.context/**/*.log
+.context/**/*.jsonl
+.context/backup-*.json
+.context/git-fetch-all.log
+/undefined/
+tools/gitleaks/
