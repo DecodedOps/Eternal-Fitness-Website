@@ -1,0 +1,1 @@
+FROM ghcr.io/decodedops/eternal-fitness-staging:0bc04db85e38cf52c919ea6cd19a49c8e6bcd2fb
