@@ -1,0 +1,123 @@
+name: image
+
+# WO-OPS-121 u11: build every image once in GitHub Actions and push it to GHCR, then point the
+# release-pin branches (pin/<coolify app>) of the apps that follow this branch at the new tag.
+# Coolify deploys an app when its pin branch changes; the servers only pull, never build.
+# The app list lives in .github/image-apps.json.
+
+on:
+  push:
+    branches: [main, staging]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: image-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      images: ${{ steps.read.outputs.images }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: read
+        env:
+          BRANCH: ${{ github.ref_name }}
+        # An image with a "branches" list is built only for pushes to those branches.
+        run: echo "images=$(jq -c --arg b "$BRANCH" '[.images[] | select(.branches == null or (.branches | index($b)))]' .github/image-apps.json)" >> "$GITHUB_OUTPUT"
+
+  image:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.images) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write public build env
+        if: matrix.buildEnvVar != ''
+        env:
+          BUILD_ENV: ${{ vars[matrix.buildEnvVar] }}
+          ENV_FILE: ${{ matrix.envFile }}
+          VAR_NAME: ${{ matrix.buildEnvVar }}
+        run: |
+          set -euo pipefail
+          if [ -z "${BUILD_ENV}" ]; then echo "::error::Actions variable ${VAR_NAME} is empty"; exit 1; fi
+          if printf '%s\n' "${BUILD_ENV}" | grep -v -E '^(NEXT_PUBLIC_[A-Z0-9_]+=.*|)$' | grep -q .; then
+            echo "::error::${VAR_NAME} may only hold NEXT_PUBLIC_* lines"; exit 1
+          fi
+          printf '%s\n' "${BUILD_ENV}" > "${ENV_FILE}"
+          echo "wrote $(grep -c = "${ENV_FILE}") public vars to ${ENV_FILE}"
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/decodedops/${{ matrix.image }}
+          tags: |
+            type=sha,format=long,prefix=
+            type=ref,event=branch
+
+      - id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ${{ matrix.file }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: ${{ matrix.buildEnvVar != '' && vars[matrix.buildEnvVar] || '' }}
+          cache-from: type=gha,scope=${{ matrix.image }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.image }}
+          provenance: false
+
+      - name: Summary
+        run: echo "ghcr.io/decodedops/${{ matrix.image }}:${{ github.sha }} (${{ steps.build.outputs.digest }})" >> "$GITHUB_STEP_SUMMARY"
+
+  bump-pins:
+    needs: image
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/image-apps.json
+          sparse-checkout-cone-mode: false
+      - name: Point this branch's pins at the new images
+        env:
+          SHA: ${{ github.sha }}
+          BRANCH: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          jq -r --arg b "$BRANCH" '.pins[] | select(.branch == $b) | "\(.app) \(.image)"' .github/image-apps.json |
+          while read -r app image; do
+            dir="$RUNNER_TEMP/$app"
+            if ! git clone -q --depth 1 --branch "pin/$app" "https://x-access-token:${TOKEN}@github.com/${REPO}.git" "$dir"; then
+              echo "::warning::no pin/$app branch yet, skipped"; continue
+            fi
+            printf 'FROM ghcr.io/decodedops/%s:%s\n' "$image" "$SHA" > "$dir/Dockerfile"
+            if git -C "$dir" diff --quiet; then echo "pin/$app already at $SHA"; continue; fi
+            git -C "$dir" commit -qam "pin: $app -> ${SHA:0:8} ($BRANCH, CI)"
+            git -C "$dir" push -q origin "pin/$app"
+            echo "pin/$app -> $SHA" >> "$GITHUB_STEP_SUMMARY"
+          done
