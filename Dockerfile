@@ -1,0 +1,1 @@
+FROM ghcr.io/decodedops/eternal-fitness:10d08b9cd3168f9dd2e7be0b7b39275cabd78957
