@@ -3,7 +3,6 @@ import { createClient } from "@/lib/supabase-server";
 import { ensureUids } from "@/lib/exercise-ref";
 import { applyCopiedWorkoutIdentity, isPlaceholderLabel } from "@/lib/session-naming";
 import { syncSessionCalendarEvent } from "@/lib/calendar-sync";
-import { deleteEvent } from "@/lib/graph-client";
 import { getSessionStatus } from "@/lib/session-transitions";
 import { londonDayKey } from "@/lib/schedule-dates";
 import { computeRollForwardPlan } from "@/lib/workout-roll-forward";
@@ -456,33 +455,15 @@ export async function DELETE(_request: Request, { params }: { params: { id: stri
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  // Clean up any Outlook event before dropping the mapping row (cascades on
-  // session delete) so a cancelled session doesn't leave an orphaned event.
-  // BUG-EF-A746B457: skip for adopted (linked) events — those are Esther's
-  // real Outlook bookings, not hub-created. Only hub-created events should be
-  // removed when the session is deleted.
-  const { data: mapRow } = await supabase
-    .from("session_calendar_events")
-    .select("event_id")
-    .eq("session_id", params.id)
-    .maybeSingle();
-
-  if (mapRow?.event_id) {
-    const { data: candidate } = await supabase
-      .from("outlook_duplicate_candidates")
-      .select("status")
-      .eq("session_id", params.id)
-      .eq("status", "linked")
-      .maybeSingle();
-
-    if (!candidate) {
-      try {
-        await deleteEvent(mapRow.event_id as string);
-      } catch (err) {
-        console.error("Calendar event delete failed (session will still be removed):", err);
-      }
-    }
-  }
+  // BUG-EF-199: this route must NEVER call deleteEvent directly. Since CR-EF-091
+  // most session_calendar_events mappings point at Esther's own adopted Outlook
+  // entries, so removing the Outlook event here would silently delete her real
+  // appointment, bypassing calendar_sync_pending_actions / confirm_before_sync.
+  // Deleting a hub session therefore leaves the Outlook event untouched (the
+  // mapping row cascades away with the session). calendar_sync_pending_actions
+  // cannot hold a delete for a session that is being removed (session_id is an
+  // ON DELETE CASCADE foreign key, so the queued row would vanish with it), and
+  // any Outlook removal must go through the approval gate in syncCalendar().
 
   const { error } = await supabase.from("sessions").delete().eq("id", params.id);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });

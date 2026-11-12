@@ -377,15 +377,48 @@ export async function syncOutlookBookings(): Promise<SyncOutlookBookingsResult> 
   // existing sessions.
   const { data: managedMappings } = await db
     .from("session_calendar_events")
-    .select("event_id");
-  const managedEventIds = new Set((managedMappings ?? []).map((m: { event_id: string }) => m.event_id));
+    .select("event_id, session_id");
+  const managedSessionByEventId = new Map(
+    ((managedMappings ?? []) as { event_id: string; session_id: string }[]).map((m) => [m.event_id, m.session_id]),
+  );
 
   for (const ev of bookingEvents) {
     // BUG-EF-102 defense — skip any event already tracked by the app's
     // own calendar sync. This is the primary guard against the ingest
     // feedback loop that created duplicate sessions (live incident
     // 2026-08-29: 5 dupes for Nathan Wadey, 4 for Monique Weardon).
-    if (managedEventIds.has(ev.id)) continue;
+    const managedSessionId = managedSessionByEventId.get(ev.id);
+    if (managedSessionId) {
+      // BUG-EF-197 — managed/adopted events are never ingested as bookings
+      // (the guard above), but Outlook is still the source of truth for the
+      // time: apply an inbound reschedule to the mapped session. Cancelled and
+      // completed sessions are left alone; nothing is ever pushed back out.
+      const newStart = ev.start?.dateTime ? new Date(ev.start.dateTime + "Z").toISOString() : null;
+      if (newStart) {
+        const { data: sessRow } = await db
+          .from("sessions")
+          .select("id, scheduled_at, cancelled_at, status")
+          .eq("id", managedSessionId)
+          .maybeSingle();
+        const sess = sessRow as { id: string; scheduled_at: string | null; cancelled_at: string | null; status: string } | null;
+        if (
+          sess &&
+          !sess.cancelled_at &&
+          sess.status !== "cancelled" &&
+          sess.status !== "completed" &&
+          (!sess.scheduled_at || new Date(sess.scheduled_at).getTime() !== new Date(newStart).getTime())
+        ) {
+          await db.from("sessions").update({ scheduled_at: newStart }).eq("id", sess.id);
+          await db
+            .from("outlook_booking_events")
+            .update({ start_at: newStart, updated_at: new Date().toISOString() })
+            .eq("event_id", ev.id)
+            .eq("status", "confirmed");
+          result.rescheduled++;
+        }
+      }
+      continue;
+    }
     // Blank-subject entries are non-working-hours blocks (Craig, 2026-08-25)
     // — not a client session, not worth showing at all. Never create one, and
     // drop any row from before this filter existed.
