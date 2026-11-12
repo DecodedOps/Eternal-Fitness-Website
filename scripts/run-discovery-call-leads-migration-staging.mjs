@@ -11,14 +11,14 @@ if (!isMain) {
   process.exit(0);
 }
 
-if (!process.env.DATABASE_URL) {
-  console.error("DATABASE_URL is not set. Export it before running this script.");
+if (!process.env.STAGING_DATABASE_URL) {
+  console.error("STAGING_DATABASE_URL is not set (no fallback by design). Export it before running this script.");
   process.exit(1);
 }
 
 const sql = readFileSync(new URL("../db/migrations/20260828_discovery_call_leads.sql", import.meta.url), "utf8");
 
-const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
+const client = new pg.Client({ connectionString: process.env.STAGING_DATABASE_URL });
 
 async function main() {
   await client.connect();

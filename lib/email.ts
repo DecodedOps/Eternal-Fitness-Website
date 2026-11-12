@@ -185,7 +185,64 @@ async function sendNodemailer(input: SendEmailInput): Promise<SendEmailResult> {
   return { success: true, messageId: info.messageId };
 }
 
-export function getEmailSender(): EmailSender {
+/**
+ * BUG-EF-203: staging must never email real clients. A non-production environment is
+ * detected explicitly (APP_ENV=staging) or by hostname (development.* / staging.* in the
+ * app URL vars). In such an environment every recipient not on EMAIL_ALLOWLIST
+ * (comma-separated full addresses or "@domain" entries; empty = block all) is dropped and
+ * logged. If nothing is left to send, the send is a dry run.
+ */
+export function isNonProductionEnv(env: NodeJS.ProcessEnv = process.env): boolean {
+  if ((env.APP_ENV || "").toLowerCase() === "staging") return true;
+  for (const key of ["NEXT_PUBLIC_SITE_URL", "NEXT_PUBLIC_APP_URL", "BETTER_AUTH_URL"]) {
+    const v = env[key];
+    if (!v) continue;
+    try {
+      const host = new URL(v).hostname.toLowerCase();
+      if (host.startsWith("development.") || host.startsWith("staging.")) return true;
+    } catch {
+      /* ignore malformed URL */
+    }
+  }
+  return false;
+}
+
+function isAllowed(addr: string, allowlist: string[]): boolean {
+  const a = addr.trim().toLowerCase();
+  const bare = (a.match(/<([^>]+)>/)?.[1] ?? a).trim();
+  return allowlist.some((entry) =>
+    entry.startsWith("@") ? bare.endsWith(entry) : bare === entry,
+  );
+}
+
+export function guardForEnvironment(
+  inner: EmailSender,
+  env: NodeJS.ProcessEnv = process.env,
+): EmailSender {
+  if (!isNonProductionEnv(env)) return inner;
+  const allowlist = (env.EMAIL_ALLOWLIST || "")
+    .split(",")
+    .map((x) => x.trim().toLowerCase())
+    .filter(Boolean);
+  return {
+    async send(input: SendEmailInput) {
+      const recipients = Array.isArray(input.to) ? input.to : [input.to];
+      const allowed = recipients.filter((r) => isAllowed(r, allowlist));
+      const blocked = recipients.length - allowed.length;
+      if (blocked > 0) {
+        console.warn(
+          `[email-guard] non-production environment: blocked ${blocked} of ${recipients.length} recipient(s) not on EMAIL_ALLOWLIST (subject: "${input.subject}")`,
+        );
+      }
+      if (allowed.length === 0) {
+        return { success: true, messageId: "blocked-non-production", dryRun: true };
+      }
+      return inner.send({ ...input, to: allowed });
+    },
+  };
+}
+
+function getRawEmailSender(): EmailSender {
   const backend = selectBackend();
   if (backend === "resend") return { send: sendResend };
   if (backend === "sendgrid") return { send: sendSendgrid };
@@ -195,6 +252,10 @@ export function getEmailSender(): EmailSender {
       return { success: true, messageId: "dry-run-no-email-backend", dryRun: true };
     },
   };
+}
+
+export function getEmailSender(): EmailSender {
+  return guardForEnvironment(getRawEmailSender());
 }
 
 export function getEmailStatus(): { configured: boolean; backend: Backend; from: string } {
