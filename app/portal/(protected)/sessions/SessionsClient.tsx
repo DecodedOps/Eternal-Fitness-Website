@@ -140,8 +140,8 @@ export function SessionsClient({
       });
       if (!res.ok) throw new Error("Cancel failed");
       setToast(nt.inside
-        ? `Session cancelled. It came out of your block — ${pot.purchasedIsEstimate ? pot.estimatedRemaining - 1 : pot.remaining != null ? pot.remaining - 1 : "?"} left. Esther has been told.`
-        : `Session cancelled and returned to your block — still ${pot.purchasedIsEstimate ? pot.estimatedRemaining : pot.remaining ?? "?"} left.`);
+        ? `Session cancelled. It came out of your package — ${pot.purchasedIsEstimate ? pot.estimatedRemaining - 1 : pot.remaining != null ? pot.remaining - 1 : "?"} left. Esther has been told.`
+        : `Session cancelled and returned to your package — still ${pot.purchasedIsEstimate ? pot.estimatedRemaining : pot.remaining ?? "?"} left.`);
       setCancelSession(null);
       setTimeout(() => setToast(null), 5000);
     } catch (err) {
@@ -188,7 +188,7 @@ export function SessionsClient({
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-foreground">Your sessions</h1>
         <p className="text-sm text-muted-foreground mt-1">
-          Everything booked from your current block. You can move or cancel any of them from here —
+          Everything booked from your current package. You can move or cancel any of them from here —
           you will always be told what it costs you before anything is changed.
         </p>
       </div>
@@ -246,7 +246,7 @@ export function SessionsClient({
               {upcoming.length === 0 ? (
                 <li className="p-8 text-center text-sm text-muted-foreground">
                   <b className="block text-foreground text-[15px] mb-1">Nothing booked yet</b>
-                  You have {pot.purchasedIsEstimate ? pot.estimatedRemaining : pot.remaining ?? "?"} sessions left in this block.{" "}
+                  You have {pot.purchasedIsEstimate ? pot.estimatedRemaining : pot.remaining ?? "?"} sessions left in this package.{" "}
                   <a href="/portal/book" className="font-bold text-foreground">Book a time</a>.
                 </li>
               ) : (
@@ -330,7 +330,7 @@ export function SessionsClient({
                     <b className="text-sm text-foreground">More than {noticeHours} hours before — nothing is used</b>
                   </div>
                   <p className="text-[13.5px] leading-relaxed m-0">
-                    The session goes straight back into your block and you can rebook it whenever
+                    The session goes straight back into your package and you can rebook it whenever
                     suits. <b className="text-foreground">Your count does not change.</b>
                   </p>
                 </div>
@@ -340,7 +340,7 @@ export function SessionsClient({
                     <b className="text-sm text-foreground">Inside {noticeHours} hours — the session is used</b>
                   </div>
                   <p className="text-[13.5px] leading-relaxed m-0 text-[#7A5A17]">
-                    The slot cannot realistically be filled, so it still comes out of your block.
+                    The slot cannot realistically be filled, so it still comes out of your package.
                     <b className="text-foreground"> Your count drops by one.</b> You are shown this before you confirm, never after.
                   </p>
                 </div>
@@ -391,7 +391,7 @@ export function SessionsClient({
                     : s.chargedFree === "charged"
                       ? "Session used"
                       : s.chargedFree === "free"
-                        ? "Returned to block"
+                        ? "Returned to package"
                         : "Put back by Esther";
 
                   return (
@@ -411,7 +411,7 @@ export function SessionsClient({
                         <div className="text-xs text-muted-foreground mt-0.5">
                           {isCompleted ? `Session ${s.chronologicalPosition?.position ?? s.sessionNumber} of ${s.chronologicalPosition?.total ?? sessionsPurchased ?? "?"} · logged by Esther`
                             : isCancelled
-                              ? `Cancelled ${s.chargedFree === "charged" ? "— this used a session" : "— went back into your block"}`
+                              ? `Cancelled ${s.chargedFree === "charged" ? "— this used a session" : "— went back into your package"}`
                               : ""}
                         </div>
                       </div>
@@ -580,7 +580,7 @@ function CancelDialog({
                 <p className={cn("text-[13.5px] leading-relaxed mt-1", nt.inside && "text-[#7A5A17]")}>
                   {nt.inside
                     ? <>The window closed <b className="text-foreground">{fmtWhenShort(nt.closes.toISOString())}</b>. The slot is now too close to offer to anyone else, so cancelling still uses this session from your block.</>
-                    : <>Free to cancel for another <b className="text-foreground">{fmtDur(nt.hoursToClose)}</b>, until <b className="text-foreground">{fmtWhenShort(nt.closes.toISOString())}</b>. The session goes straight back into your block and you can rebook it whenever suits.</>
+                    : <>Free to cancel for another <b className="text-foreground">{fmtDur(nt.hoursToClose)}</b>, until <b className="text-foreground">{fmtWhenShort(nt.closes.toISOString())}</b>. The session goes straight back into your package and you can rebook it whenever suits.</>
                   }
                 </p>
               </div>

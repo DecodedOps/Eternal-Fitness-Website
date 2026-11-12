@@ -1533,7 +1533,7 @@ function WorkoutDrawer({ sessions, ruleTypesById }: { sessions: DBSession[]; rul
     <DrawerShell
       id="dw-workout"
       title={focusLabel}
-      subtitle={`Block ${blockNumber ?? "\u2014"} \u00b7 session ${sessionNumber ?? "\u2014"}`}
+      subtitle={`Session set ${blockNumber ?? "\u2014"} \u00b7 session ${sessionNumber ?? "\u2014"}`}
       width="lg"
     >
       {hasExercises && version ? (

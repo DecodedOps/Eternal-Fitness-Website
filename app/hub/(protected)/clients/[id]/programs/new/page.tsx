@@ -66,7 +66,8 @@ export default async function PlanNewProgrammePage({
 
   return (
     <>
-      <style>{`
+      {/* BUG-EF-155: raw HTML so React does not entity-escape the quotes in `content: ''` (SSR/client text mismatch) */}
+      <style dangerouslySetInnerHTML={{ __html: `
         .pn-choice { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .pn-choice-card {
           border: 1px solid var(--hub-border);
@@ -161,7 +162,7 @@ export default async function PlanNewProgrammePage({
         .pn-hdr-sub { margin: 3px 0 0; font-size: 13px; color: var(--color-body); }
         .pn-bdg { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 9px; border-radius: 9999px; font-size: 11.5px; font-weight: 600; background: var(--status-primary-bg); color: var(--color-rose); border: 1px solid var(--status-primary-border); }
         @media (max-width: 1080px) { .pn-choice { grid-template-columns: 1fr; } }
-      `}</style>
+      ` }} />
 
       <div className="max-w-[1100px] mx-auto">
         {/* Back link */}
@@ -220,7 +221,7 @@ export default async function PlanNewProgrammePage({
                 </p>
                 <p className="pn-choice-hint">
                   <b>Best when</b> starting fresh, or the client&apos;s needs
-                  have shifted since the last block.
+                  have shifted since the last programme.
                 </p>
                 <div className="pn-choice-actions">
                   <Link

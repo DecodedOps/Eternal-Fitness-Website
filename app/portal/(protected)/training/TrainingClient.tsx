@@ -120,13 +120,13 @@ export default function TrainingClient({
       <section>
         <h1 className="text-2xl font-semibold tracking-tight">Your training</h1>
         <p className="mt-1 text-muted-foreground">
-          Block {plan.block.block_number} — pick a session, follow the plan, and log
+          Programme {plan.block.block_number} — pick a session, follow the plan, and log
           each set as you go.
         </p>
       </section>
 
       {/* Session picker — horizontal scroll on phones */}
-      <nav aria-label="Sessions in this block" className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+      <nav aria-label="Sessions in this programme" className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
         <div className="flex w-max gap-2 pb-1">
           {plan.sessions.map((s, i) => {
             const active = i === selectedIdx;
@@ -175,7 +175,7 @@ export default function TrainingClient({
           onSave={saveSetLog}
         />
         <SessionSection
-          title="Main block"
+          title="Main set"
           sectionKey="main_block"
           exercises={session.main_block}
           session={session}

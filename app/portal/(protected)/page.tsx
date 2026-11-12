@@ -265,7 +265,7 @@ export default async function PortalDashboardPage() {
                   Focus
                 </p>
                 <p className="font-semibold">
-                  Block {upcomingSession.block_number} —{" "}
+                  Programme {upcomingSession.block_number} —{" "}
                   {upcomingSession.focus_label || upcomingSession.archetype || "Not set"}
                 </p>
               </div>

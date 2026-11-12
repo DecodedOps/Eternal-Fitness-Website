@@ -239,7 +239,7 @@ export function PortalBookingClient({
         <h1 className="text-2xl font-bold tracking-tight text-foreground">Book your next sessions</h1>
         <p className="text-sm text-muted-foreground mt-1">
           Choose as many times as you have sessions left. Everything you pick comes straight out of the
-          block you have already paid for — there is nothing further to pay here.
+          package you have already paid for — there is nothing further to pay here.
         </p>
       </div>
 
@@ -290,7 +290,7 @@ export function PortalBookingClient({
               </span>
             ) : (
               <span className="inline-flex items-center gap-1.5 rounded-pill px-3 py-1 text-xs font-bold bg-[rgba(193,131,159,.10)] text-[#94566F] border border-[rgba(193,131,159,.22)]">
-                Block in progress
+                Package in progress
               </span>
             )}
           </div>
@@ -452,8 +452,8 @@ export function PortalBookingClient({
                   <path d="M12 9v4M12 17h.01" /><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
                 </svg>
                 <div>
-                  <b className="text-foreground">That is everything in this block.</b> Remove one of your choices to swap it for a
-                  different time, or ask Esther about your next block — she can add sessions before you
+                  <b className="text-foreground">That is everything in this package.</b> Remove one of your choices to swap it for a
+                  different time, or ask Esther about your next package — she can add sessions before you
                   run out so there is no gap.
                 </div>
               </div>
@@ -533,7 +533,7 @@ export function PortalBookingClient({
               </button>
               <p className="text-[12px] leading-relaxed text-muted-foreground mt-3">
                 <b className="text-foreground">Free to cancel</b> up to {noticeHours} hours before a session. Cancel inside those
-                {noticeHours} hours and the session still comes out of your block — you will always be shown which
+                {noticeHours} hours and the session still comes out of your package — you will always be shown which
                 applies before you confirm.
               </p>
             </div>

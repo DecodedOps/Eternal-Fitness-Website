@@ -49,9 +49,11 @@
    landscape photo, so object-fit:cover already crops in hard on the sides —
    object-position's X has plenty of slack to work with on its own. The old
    rule stacked scale(2.2) on top of that, zooming in ~2x too far and pushing
-   the image mostly off-screen. */
+   the image mostly off-screen. BUG-EF-216: 65% cropped Esther off the left edge
+   (visible source x 0.41-0.78 at 360-430px; she spans x 0.30-0.58); 41% centres
+   her at x~0.44 so the window is ~0.26-0.62 at all three widths. */
 @media (max-width: 1000px) {
-  .efhome .hero-media img { transform: none; object-position: 65% 36%; }
+  .efhome .hero-media img { transform: none; object-position: 41% 36%; }
 }
 /* #hero holds a fixed pixel height while width keeps growing with the viewport, so
    object-fit:cover crops proportionally more off the top/bottom the wider the screen
