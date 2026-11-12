@@ -1,1 +1,1 @@
-FROM ghcr.io/decodedops/eternal-fitness:491c56b6c30dc6d2228d862590c52ac7b879033e
+FROM ghcr.io/decodedops/eternal-fitness:f99b19a2ba05243ed7fc4e33bdbe4c5454cae2b7
